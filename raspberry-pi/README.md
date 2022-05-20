@@ -1,6 +1,20 @@
 # raspberry-pi-setup
 Raspberry Pi first initial setup
 
+### Raspberry Pi Imager installation
+Download Raspberry Pi Imager that will create the image for you:
+
+Url: https://www.raspberrypi.com/software/
+
+You can:
+- Choose the os you want
+- Choose the storage
+- In the bottom right gear you can add
+  - Hostname
+  - Enable ssh
+  - Username and password
+  - Wireless configuration
+
 ### Manual installation
 1. Use [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html) for:
    - Wifi
