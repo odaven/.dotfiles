@@ -1,8 +1,8 @@
-SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+DOTFILES="$HOME/.dotfiles"
 
 echo "[.dotfiles/vim] Creating soft link $SCRIPTPATH/.vimrc into home directory"
-ln -sf $SCRIPTPATH/.vimrc ~/.vimrc
-ln -sf $SCRIPTPATH/.ideavimrc ~/.ideavimrc
+ln -sfv $DOTFILES/vim/.vimrc ~/.vimrc
+ln -sfv $DOTFILES/vim/.ideavimrc ~/.ideavimrc
 
 echo "[.dotfiles/vim] Downloading vim-plug"
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
