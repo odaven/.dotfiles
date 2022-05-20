@@ -1,4 +1,4 @@
-SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+DOTFILES="$HOME/.dotfiles"
 
 echo "[.dotfiles/raspberry-pi] Raspberry Pi Setup"
 
@@ -13,7 +13,7 @@ echo "[.dotfiles/raspberry-pi] Installing packages"
 sudo apt --assume-yes install vim zsh curl wget git
 
 echo "[.dotfiles/raspberry-pi] Start zsh configuration"
-source $SCRIPTPATH/../zsh/install.sh
+source "$DOTFILES"/zsh/install.sh
 
 echo "[.dotfiles/raspberry-pi] Start vim configuration"
-source $SCRIPTPATH/../vim/install.sh
+source "$DOTFILE"/vim/install.sh
