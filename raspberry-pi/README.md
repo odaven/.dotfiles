@@ -1,6 +1,7 @@
 # raspberry-pi-setup
 Raspberry Pi first initial setup
 
+### Manual installation
 1. Use [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html) for:
    - Wifi
    - Hostname
@@ -14,7 +15,7 @@ Raspberry Pi first initial setup
    - Delete default user pi `sudo deluser --remove-home pi`
 
 
-3. Accessing with ssh keys
+### Accessing with ssh keys
    - Generate a key with `ssh-keygen -t rsa -b 4096 -C "whateveryou-what"`
    - Send it to the raspberry with `ssh-copy-id -i your-key.pub your-pi-user@pi-host-name`
    - Add in your `.ssh/config` in the machine you connect from the configuration below.
