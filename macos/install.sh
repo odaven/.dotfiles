@@ -1,6 +1,6 @@
 DOTFILES="$HOME/.dotfiles"
 
-echo "[.dotfiles/macos] MacOs Setup"
+echo "[.dotfiles/macos] MacOS Setup"
 
 echo "[.dotfiles/macos] Install homebrew"
 source "$DOTFILES"/brew/install.sh
@@ -16,3 +16,6 @@ source "$DOTFILES"/zsh/install.sh
 
 echo "[.dotfiles/macos] Start vim configuration"
 source "$DOTFILES"/vim/install.sh
+
+echo "[.dotfiles/macos] MacOS settings"
+source os-settings.sh
