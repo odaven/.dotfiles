@@ -6,10 +6,10 @@ echo "[.dotfiles/macos] Install homebrew"
 source "$DOTFILES"/brew/install.sh
 
 echo "[.dotfiles/macos] Installing software with homebrew"
-source with-brew.sh
+source "$DOTFILES"/macos/with-brew.sh
 
 echo "[.dotfiles/macos] Installing software with npm"
-source with-npm.sh
+source "$DOTFILES"/macos/with-npm.sh
 
 echo "[.dotfiles/macos] Start zsh configuration"
 source "$DOTFILES"/zsh/install.sh
@@ -18,4 +18,4 @@ echo "[.dotfiles/macos] Start vim configuration"
 source "$DOTFILES"/vim/install.sh
 
 echo "[.dotfiles/macos] MacOS settings"
-source os-settings.sh
+source "$DOTFILES"/macos/os-settings.sh
