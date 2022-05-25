@@ -36,6 +36,7 @@ set smartcase           " All lower case: case insensitive search.  One capital 
 "------------------- Plugins -------------------
 call plug#begin()
 
+Plug 'easymotion/vim-easymotion'
 Plug 'gruvbox-community/gruvbox'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'tpope/vim-surround'
@@ -61,4 +62,3 @@ nmap <silent> <leader>tT :TestFile<CR>
 nmap <silent> <leader>ta :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tg :TestVisit<CR>
-
