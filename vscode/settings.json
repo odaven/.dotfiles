@@ -6,5 +6,6 @@
     "vim.neovimUseConfigFile": true,
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
-    "vim.easymotion": true
+    "vim.easymotion": true,
+    "workbench.colorTheme": "Gruvbox Dark Hard"
 }
