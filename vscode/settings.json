@@ -1,2 +1,10 @@
 {
+    "vim.enableNeovim": true,
+    "vim.leader": " ",
+    "vim.neovimConfigPath": "~/.config/nvim/init.vim ",
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.neovimUseConfigFile": true,
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
+    "vim.easymotion": true
 }
