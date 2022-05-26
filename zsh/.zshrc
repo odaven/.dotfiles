@@ -104,6 +104,6 @@ if [ -f '.zsh_aliases' ]; then
     source .zsh_aliases
 fi
 
-if [ -f '.zsh_work' ]; then
-    source .zsh_work
+if [ -f '.zshrc_work' ]; then
+    source .zshrc_work
 fi
