@@ -7,5 +7,6 @@
     "vim.vimrc.enable": true,
     "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
     "vim.easymotion": true,
-    "workbench.colorTheme": "Gruvbox Dark Hard"
+    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "editor.mouseWheelZoom": true
 }
