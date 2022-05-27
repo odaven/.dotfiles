@@ -8,5 +8,8 @@
     "vim.vimrc.path": "$HOME/.config/nvim/init.vim",
     "vim.easymotion": true,
     "workbench.colorTheme": "Gruvbox Dark Hard",
-    "editor.mouseWheelZoom": true
+    "editor.mouseWheelZoom": true,
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
