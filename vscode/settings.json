@@ -11,5 +11,6 @@
     "editor.mouseWheelZoom": true,
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "editor.lineNumbers": "relative"
 }
