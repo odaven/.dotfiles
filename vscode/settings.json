@@ -12,5 +12,8 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.lineNumbers": "relative"
+    "editor.lineNumbers": "relative",
+    "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
 }
