@@ -51,10 +51,6 @@ let mapleader = " "
 
 nnoremap <silent> <C-p> :FZF<CR>
 
-" Insert mode mappings
-inoremap jj <ESC>
-inoremap jk <ESC>
-
 " Vim test
 nmap <silent> <leader>tt :TestNearest<CR>
 nmap <silent> <leader>tT :TestFile<CR>
