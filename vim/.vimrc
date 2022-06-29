@@ -36,25 +36,11 @@ set smartcase           " All lower case: case insensitive search.  One capital 
 "------------------- Plugins -------------------
 call plug#begin()
 
-Plug 'gruvbox-community/gruvbox'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
-Plug 'vim-test/vim-test'
 
 call plug#end()
-
-colorscheme gruvbox
 
 "------------------- Mappings -------------------
 
 let mapleader = " "
-
-nnoremap <silent> <C-p> :FZF<CR>
-
-" Vim test
-nmap <silent> <leader>tt :TestNearest<CR>
-nmap <silent> <leader>tT :TestFile<CR>
-nmap <silent> <leader>ta :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tg :TestVisit<CR>
-
