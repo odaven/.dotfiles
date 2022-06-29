@@ -1,6 +1,5 @@
 echo "[.dotfiles/neovim] Creating soft links"
 ln -sfv ~/.dotfiles/neovim/nvim ~/.config
-ln -sfv ~/.config/nvim/.ideavimrc ~/.ideavimrc
 
 echo "[.dotfiles/neovim] Install Vim-Plug"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

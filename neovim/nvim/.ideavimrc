@@ -1,3 +1,0 @@
-"" Source your .vimrc
-source ~/.config/nvim/init.vim
-set easymotion
