@@ -1,6 +1,7 @@
 # Taps
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 # Packages
@@ -20,6 +21,7 @@ brew "zsh"
 cask "discord"
 cask "docker"
 cask "firefox"
+cask "font-hack"
 cask "gimp"
 cask "github"
 cask "google-chrome"
