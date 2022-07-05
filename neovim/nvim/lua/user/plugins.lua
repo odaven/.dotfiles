@@ -23,6 +23,9 @@ return require('packer').startup(function(use)
         config = function() require('user.plugins-config.telescope') end
     }
 
+
+    use 'gruvbox-community/gruvbox'
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then
