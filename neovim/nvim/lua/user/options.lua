@@ -20,7 +20,7 @@ local options = {
     splitright = true,
     swapfile = false,
     tabstop = 4,
-    wrap = true
+    wrap = false
 
 }
 
