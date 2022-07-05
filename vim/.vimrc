@@ -44,3 +44,25 @@ call plug#end()
 "------------------- Mappings -------------------
 
 let mapleader = " "
+
+"---- Normal mode mappings ----
+
+" Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+nnoremap <C-H> <C-w>H
+nnoremap <C-J> <C-w>J
+nnoremap <C-K> <C-w>K
+nnoremap <C-L> <C-w>L
+
+nnoremap <Tab> <C-w>w
+
+
+"---- Visual mode mappings ----
+
+" Stay in indent mode
+vnoremap < <gv 
+vnoremap > >gv 
