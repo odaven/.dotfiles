@@ -20,6 +20,7 @@ local options = {
     splitright = true,
     swapfile = false,
     tabstop = 4,
+    termguicolors = true,
     wrap = false
 
 }
