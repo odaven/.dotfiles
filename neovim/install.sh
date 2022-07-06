@@ -1,4 +1,5 @@
 echo "[.dotfiles/neovim] Creating soft links"
+mkdir -p ~/.config
 ln -sfv ~/.dotfiles/neovim/nvim ~/.config
 
 echo "[.dotfiles/neovim] Install packer.nvim"
