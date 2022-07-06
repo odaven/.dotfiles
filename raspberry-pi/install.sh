@@ -10,7 +10,7 @@ echo "[.dotfiles/raspberry-pi] Removing unwanted packages"
 sudo apt --assume-yes remove vim-tiny
 
 echo "[.dotfiles/raspberry-pi] Installing packages"
-sudo apt --assume-yes install vim zsh curl wget git
+sudo apt --assume-yes install vim zsh curl wget git neovim tmux
 
 echo "[.dotfiles/raspberry-pi] Start zsh configuration"
 source "$DOTFILES"/zsh/install.sh
