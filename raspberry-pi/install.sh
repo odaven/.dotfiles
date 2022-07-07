@@ -21,3 +21,6 @@ source "$DOTFILES"/zsh/install.sh
 
 echo "[.dotfiles/raspberry-pi] Start vim configuration"
 source "$DOTFILES"/vim/install.sh
+
+echo "[.dotfiles/raspberry-pi] Start nvim configuration"
+source "$DOTFILES"/neovim/install.sh
