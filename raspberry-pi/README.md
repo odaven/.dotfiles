@@ -13,8 +13,11 @@ You can:
 - In the bottom right gear you can add
   - Hostname
   - Enable ssh
+  - Add the ssh key (See below for how to generate)
   - Username and password
   - Wireless configuration
+
+By defualt auto-login is enabled, for disable it use [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html) 
   
 ---
 ### Installation method 2: Manual
