@@ -19,3 +19,6 @@ source "$DOTFILES"/vim/install.sh
 
 echo "[.dotfiles/macos] MacOS settings"
 source "$DOTFILES"/macos/os-settings.sh
+
+echo "[.dotfiles/macos] Tmux configuration"
+source "$DOTFILES"/tmux/install.sh

@@ -24,3 +24,6 @@ source "$DOTFILES"/vim/install.sh
 
 echo "[.dotfiles/raspberry-pi] Start nvim configuration"
 source "$DOTFILES"/neovim/install.sh
+
+echo "[.dotfiles/raspberry-pi] Tmux configuration"
+source "$DOTFILES"/tmux/install.sh
