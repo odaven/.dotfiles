@@ -1,6 +1,8 @@
+DOTFILES="$HOME/.dotfiles"
+
 echo "[.dotfiles/neovim] Creating soft links"
 mkdir -p ~/.config
-ln -sfv ~/.dotfiles/neovim/nvim ~/.config
+ln -sfv "$DOTFILES"/neovim/nvim ~/.config
 
 echo "[.dotfiles/neovim] Install packer.nvim"
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
