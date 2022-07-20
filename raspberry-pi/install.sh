@@ -4,7 +4,7 @@ echo "[.dotfiles/raspberry-pi] Raspberry Pi Setup"
 
 
 echo "[.dotfiles/raspberry-pi] Adding apt repositories"
-sudo apt install software-properties-common
+sudo apt --assume-yes install software-properties-common
 sudo apt-add-repository ppa:ansible/ansible
 
 echo "[.dotfiles/raspberry-pi] Apt updating and upgrading"
