@@ -32,3 +32,6 @@ source "$DOTFILES"/neovim/install.sh
 
 echo "[.dotfiles/raspberry-pi] Tmux configuration"
 source "$DOTFILES"/tmux/install.sh
+
+echo "[.dotfiles/raspberry-pi] Finishing"
+sudo apt --assume-yes autoremove
