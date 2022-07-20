@@ -111,3 +111,6 @@ fi
 if [ -f '.zshrc_work' ]; then
     source .zshrc_work
 fi
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
