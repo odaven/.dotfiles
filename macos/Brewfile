@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 # Packages
+brew "ansible"
 brew "curl"
 brew "git"
 brew "htop"
