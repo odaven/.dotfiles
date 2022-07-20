@@ -88,6 +88,6 @@ function git_prompt_infoo() {
 
 # left prompt
 PS1='
-%{$fg[magenta]%}%D{%I:%M%p} %{$reset_color%}%{$bold_color$fg[cyan]%}%~%u$(git_info)
+%{$fg[magenta]%}%* %{$reset_color%}%{$bold_color$fg[cyan]%}%~%u$(git_info)
 %(?.%{$fg[blue]%}.%{$fg[red]%})%(!.#.❯)%{$reset_color%} '
 
