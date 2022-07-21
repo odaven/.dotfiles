@@ -14,6 +14,9 @@ source "$DOTFILES"/zsh/install.sh
 echo "[.dotfiles/macos] Start vim configuration"
 source "$DOTFILES"/vim/install.sh
 
+echo "[.dotfiles/macos] Start nvim configuration"
+source "$DOTFILES"/neovim/install.sh
+
 echo "[.dotfiles/macos] MacOS settings"
 source "$DOTFILES"/macos/os-settings.sh
 
