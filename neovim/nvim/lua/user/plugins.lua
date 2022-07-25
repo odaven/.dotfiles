@@ -11,31 +11,20 @@ return require('packer').startup(function(use)
     use 'tpope/vim-surround'
 
     use 'kyazdani42/nvim-web-devicons'
-    use {
-        'kyazdani42/nvim-tree.lua',
-        config = function() require('user.plugins-config.nvim-tree') end 
-    }
+    use 'kyazdani42/nvim-tree.lua'
+    
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        config = function() require('user.plugins-config.lualine') end 
-    }
+    use 'nvim-lualine/lualine.nvim'
+    
 
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} },
-        config = function() require('user.plugins-config.telescope') end
-    }
-
+    use 'nvim-lua/plenary.nvim'
+    use 'nvim-telescope/telescope.nvim'
+    
 
     use 'gruvbox-community/gruvbox'
 
 
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
-        config = function() require('user.plugins-config.nvim-treesitter') end
-    }
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
