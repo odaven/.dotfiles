@@ -1,3 +1,11 @@
+local opts = { noremap = true, silent = true }
+
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<leader>E", ":NvimTreeFindFile<CR>", opts)
+
 require("nvim-tree").setup({
 
     view = {
@@ -54,3 +62,4 @@ require("nvim-tree").setup({
         }
     }
 })
+

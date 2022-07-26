@@ -34,9 +34,6 @@ keymap("n", "<C-S-l>", "<C-w>L", opts)
 keymap("n", "<Tab>", "<C-w>w", opts) -- Use Tab to move between open windows
 -- keymap("n", "<S-Tab>", "<C-w>w", opts) This one works so it could be useful in the future
 
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-keymap("n", "<leader>E", ":NvimTreeFindFile<CR>", opts)
-
 -- Resize with arrows
 -- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 -- keymap("n", "<C-Down>", ":resize -2<CR>", opts)
