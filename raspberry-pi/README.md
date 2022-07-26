@@ -36,7 +36,7 @@ B. (Optional) Delete default user and create your own
 ---
 
 ### Accessing with ssh keys
-   - Generate a key with `ssh-keygen -t rsa -b 4096 -C "whateveryou-what"`
+   - Generate a key with `ssh-keygen -t ed25519 -C "your_email@example.com"`
    - Send it to the raspberry with `ssh-copy-id -i your-key.pub your-pi-user@pi-host-name`
    - Add in your `.ssh/config` in the machine you connect from the configuration below.
    - Connect with `ssh your-pi-user@pi-host-name` or if you added the user in the config file `ssh pi-host-name`
