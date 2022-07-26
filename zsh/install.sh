@@ -4,6 +4,7 @@ echo "[.dotfiles/zsh] Changing zsh to default"
 sudo chsh -s $(which zsh) $(whoami)
 
 echo "[.dotfiles/zsh] Installing oh-my-zsh"
+rm -rf .oh-my-zsh/
 curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 
 echo "[.dotfiles/zsh] Creating soft link $DOTFILES/zsh/.zsh_aliases into home directory"
