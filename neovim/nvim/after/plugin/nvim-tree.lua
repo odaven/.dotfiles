@@ -60,6 +60,9 @@ require("nvim-tree").setup({
                 { key = 'i', action = 'toggle_file_info' },
             }
         }
+    },
+    git = {
+        ignore = false
     }
 })
 
