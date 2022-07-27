@@ -37,6 +37,7 @@ set smartcase           " All lower case: case insensitive search.  One capital 
 call plug#begin()
 
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 call plug#end()
