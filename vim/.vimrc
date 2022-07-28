@@ -61,3 +61,7 @@ nnoremap <Tab> <C-w>w
 " Stay in indent mode
 vnoremap < <gv 
 vnoremap > >gv 
+
+" Move up and down
+vnoremap J :move '>+1<CR>gv-gv
+vnoremap K :move '<-2<CR>gv-gv

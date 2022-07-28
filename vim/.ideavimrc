@@ -1,3 +1,7 @@
-"" Source your .vimrc
+" Source your .vimrc
 source ~/.vimrc
-set easymotion
+set ideajoin
+set idearefactormode=keep
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
