@@ -23,8 +23,7 @@ require("nvim-tree").setup({
                 { key = 'v', action = 'preview' },
 
                 -- Moving in the tree
-                { key = 'h', action = 'close_node' },
-                { key = "K", action = "parent_node" },
+                { key = 'h', action = 'parent_node' },
                 { key = '<', action = 'first_sibling' },
                 { key = '>', action = 'last_sibling' },
 
@@ -57,7 +56,7 @@ require("nvim-tree").setup({
                 { key = 'R', action = 'refresh' },
                 { key = 'f', action = 'live_filter' },
                 { key = 's', action = 'system_open' },
-                { key = 'i', action = 'toggle_file_info' },
+                { key = 'K', action = 'toggle_file_info' },
             }
         }
     },
