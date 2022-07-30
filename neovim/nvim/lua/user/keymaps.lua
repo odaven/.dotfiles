@@ -26,11 +26,6 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<C-S-h>", "<C-w>H", opts)
-keymap("n", "<C-S-j>", "<C-w>J", opts)
-keymap("n", "<C-S-k>", "<C-w>K", opts)
-keymap("n", "<C-S-l>", "<C-w>L", opts)
-
 keymap("n", "<Tab>", "<C-w>w", opts) -- Use Tab to move between open windows
 -- keymap("n", "<S-Tab>", "<C-w>w", opts) This one works so it could be useful in the future
 
