@@ -104,12 +104,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f '.zsh_aliases' ]; then
-    source .zsh_aliases
+if [ -f ~/.zsh_aliases ]; then
+    source ~/.zsh_aliases
 fi
 
-if [ -f '.zshrc_work' ]; then
-    source .zshrc_work
+if [ -f ~/.zshrc_work ]; then
+    source ~/.zshrc_work
 fi
 
 # Load Angular CLI autocompletion if the client is installed
