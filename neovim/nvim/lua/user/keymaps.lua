@@ -20,12 +20,16 @@ vim.g.maplocalleader = " "
 
 
 ------------------ Normal ------------------
+
+-- Increment/decrement
+keymap("n", "+", "<C-a>", opts)
+keymap("n", "-", "<C-x>", opts)
+
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
-
 keymap("n", "<Tab>", "<C-w>w", opts) -- Use Tab to move between open windows
 -- keymap("n", "<S-Tab>", "<C-w>w", opts) This one works so it could be useful in the future
 
