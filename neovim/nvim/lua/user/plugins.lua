@@ -8,10 +8,11 @@ return require('packer').startup(function(use)
 
     use 'wbthomason/packer.nvim'
     
-    use 'tpope/vim-commentary'
     use 'tpope/vim-surround'
 
     use 'ggandor/lightspeed.nvim'
+
+    use 'numToStr/Comment.nvim'
 
     use 'kyazdani42/nvim-web-devicons'
     use 'kyazdani42/nvim-tree.lua'
