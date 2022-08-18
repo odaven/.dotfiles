@@ -1,4 +1,13 @@
 ###################################################
+# System preferences -> General
+###################################################
+
+# Accent colour
+defaults write -g AppleAccentColor -string 1
+# Highlight colour
+defaults write -g AppleHighlightColor -string "1.000000 0.874510 0.701961 Orange"
+
+###################################################
 # Keyboard
 ###################################################
 
