@@ -22,6 +22,7 @@ brew "wget"
 brew "zsh"
 
 # Apps
+cask "alacritty"
 cask "battle-net"
 cask "discord"
 cask "docker"
