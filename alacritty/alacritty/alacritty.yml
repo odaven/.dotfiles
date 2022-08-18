@@ -425,6 +425,11 @@ schemes:
 
 colors: *Gruvbox
 
+#######################################
+##       END OF COLOR SCHEMES        ##
+#######################################
+
+
 # Bell
 #
 # The bell is rung every time the BEL control character is received.
