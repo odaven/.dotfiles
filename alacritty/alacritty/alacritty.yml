@@ -340,7 +340,10 @@ schemes:
   Gruvbox: &Gruvbox
     primary:
       # hard contrast background - '#1d2021'
-      background:        &gruvbox_dark_bg '#282828'
+      # background:        &gruvbox_dark_bg '#282828'
+      # Changing original one to create more contrast with other
+      # tools using gruvbox too
+      background:        &gruvbox_dark_bg '#000000'
       # soft contrast background - '#32302f'
       foreground:        '#ebdbb2'
       bright_foreground: '#fbf1c7'
