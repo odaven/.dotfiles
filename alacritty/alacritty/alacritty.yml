@@ -750,6 +750,10 @@ key_bindings:
   - { key: Key2,     mods: Alt,     chars: "€"  }
   - { key: Key2,     mods: Shift,   chars: "@"  }
   - { key: Key3,     mods: Alt,     chars: "#"  }
+  - { key: Left,     mods: Alt,     chars: "\x1bb"                       } # one word left
+  - { key: Right,    mods: Alt,     chars: "\x1bf"                       } # one word right
+  - { key: Left,     mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right,    mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
 
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
