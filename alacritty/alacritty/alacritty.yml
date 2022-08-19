@@ -534,10 +534,13 @@ colors: *Gruvbox
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
-#  args:
-#    - --login
+shell:
+  program: /usr/local/bin/zsh
+  args:
+    - --login
+    - -c
+    - "tmux attach -t bedrock || tmux new -s bedrock"
+
 
 # Startup directory
 #
