@@ -539,7 +539,7 @@ shell:
   args:
     - --login
     - -c
-    - "tmux attach -t bedrock || tmux new -s bedrock"
+    - "tmux new-session -A -s bedrock"
 
 
 # Startup directory
