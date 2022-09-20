@@ -22,3 +22,6 @@ source "$DOTFILES"/macos/os-settings.sh
 
 echo "[.dotfiles/macos] Tmux configuration"
 source "$DOTFILES"/tmux/install.sh
+
+echo "[.dotfiles/macos] Alacritty configuration"
+source "$DOTFILES"/alacritty/install.sh
