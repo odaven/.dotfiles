@@ -21,9 +21,6 @@ vim.g.maplocalleader = " "
 
 ------------------ Normal ------------------
 
--- Increment/decrement
-keymap("n", "+", "<C-a>", opts)
-keymap("n", "-", "<C-x>", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", "<C-w>h", opts)

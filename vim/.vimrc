@@ -48,9 +48,6 @@ let mapleader = " "
 
 "---- Normal mode mappings ----
 
-" Increment/decrement
-nnoremap + <C-a>
-nnoremap - <C-x>
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
