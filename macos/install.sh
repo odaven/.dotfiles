@@ -25,3 +25,6 @@ source "$DOTFILES"/tmux/install.sh
 
 echo "[.dotfiles/macos] Alacritty configuration"
 source "$DOTFILES"/alacritty/install.sh
+
+echo "[.dotfiles/macos] Ideavim configuration"
+source "$DOTFILES"/ideavim/install.sh
