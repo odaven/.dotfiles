@@ -19,6 +19,7 @@ brew "tmux"
 brew "typescript"
 brew "vim"
 brew "wget"
+brew "yarn"
 brew "zsh"
 
 # Apps
