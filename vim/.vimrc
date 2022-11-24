@@ -48,7 +48,7 @@ call plug#end()
 let mapleader = " "
 
 "---- Normal mode mappings ----
-
+nnoremap Y y$
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
