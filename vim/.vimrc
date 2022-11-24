@@ -39,6 +39,7 @@ call plug#begin()
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
 
@@ -66,3 +67,6 @@ vnoremap > >gv
 " Move up and down
 vnoremap J :move '>+1<CR>gv=gv
 vnoremap K :move '<-2<CR>gv=gv
+
+
+let g:highlightedyank_highlight_duration = 250
