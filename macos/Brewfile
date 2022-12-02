@@ -18,7 +18,7 @@ brew "prettier"
 brew "tmux"
 brew "tree"
 brew "typescript"
-brew "vim", link: false
+brew "vim"
 brew "wget"
 brew "yarn"
 brew "zsh"
