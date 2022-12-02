@@ -3,7 +3,7 @@
 ---
 
 ### Installation method 1: Raspberry Pi Imager
-Download Raspberry Pi Imager that will create the image for you:
+Download Raspberry Pi Imager that will create the image for you in the SD card.
 
 Url: https://www.raspberrypi.com/software/
 
@@ -17,10 +17,17 @@ You can:
   - Username and password
   - Wireless configuration
 
-By defualt auto-login is enabled, for disable it use [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html) 
+Insert the SD card in the raspberry pi now.
+
+Once started you can ```ssh raspberry-pi-hostname```
+
+By default auto-login is enabled, for disable it use [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html) 
   
+
 ---
 ### Installation method 2: Manual
+Log in the raspberry.
+
 A. Use [raspi-config](https://www.raspberrypi.com/documentation/computers/configuration.html) for:
    - Wifi
    - Hostname
@@ -35,7 +42,7 @@ B. (Optional) Delete default user and create your own
    
 ---
 
-### Accessing with ssh keys
+### Info for ssh keys
    - Generate a key with `ssh-keygen -t ed25519 -C "your_email@example.com"`
    - Send it to the raspberry with `ssh-copy-id -i your-key.pub your-pi-user@pi-host-name`
    - Add in your `.ssh/config` in the machine you connect from the configuration below.
