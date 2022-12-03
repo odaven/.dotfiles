@@ -20,7 +20,8 @@ vim.g.maplocalleader = " "
 
 
 ------------------ Normal ------------------
-
+-- When doing J keep the cursor in place
+keymap("n", "J", "mzJ`z", opts)
 
 -- Better window navigation
 keymap("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
@@ -30,6 +31,10 @@ keymap("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
 keymap("n", "<Tab>", "<C-w>w", opts) -- Use Tab to move between open windows
 -- keymap("n", "<S-Tab>", "<C-w>w", opts) This one works so it could be useful in the future
 
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("n", "n", "nzzzv", opts)
+keymap("n", "N", "Nzzzv", opts)
 -- Resize with arrows
 -- keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 -- keymap("n", "<C-Down>", ":resize -2<CR>", opts)

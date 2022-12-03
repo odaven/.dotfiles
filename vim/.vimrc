@@ -50,6 +50,9 @@ let mapleader = " "
 "---- Normal mode mappings ----
 nnoremap Y y$
 
+" When doing J keep the cursor in place
+nnoremap J mzJ`z
+
 " Better window navigation
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -57,6 +60,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <Tab> <C-w>w
 
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
 
 "---- Visual mode mappings ----
 
