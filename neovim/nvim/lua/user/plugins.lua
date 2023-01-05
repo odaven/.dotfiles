@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     
     use 'tpope/vim-surround'
 
-    use 'ggandor/lightspeed.nvim'
+    use 'ggandor/leap.nvim'
 
     use 'numToStr/Comment.nvim'
 
