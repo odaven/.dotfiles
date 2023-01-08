@@ -20,6 +20,8 @@ set signcolumn=yes
 set smartindent
 "set spell               " Enable spell checking
 syntax on               " Syntax
+set wildmenu
+set wildoptions=pum,tagfile
 
 "------------------- Tabulation -------------------
 set expandtab           " Uses spaces instead of tab
