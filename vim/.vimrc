@@ -35,6 +35,8 @@ set ignorecase          " Ignore case when searching
 set incsearch           " With incremental search, does not wait to Enter to be pressed
 set smartcase           " All lower case: case insensitive search.  One capital or more will assume case sensitive search
 
+colorscheme slate
+
 "------------------- Plugins -------------------
 call plug#begin()
 
