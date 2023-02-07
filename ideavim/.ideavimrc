@@ -1,7 +1,126 @@
-" Source your .vimrc
 source ~/.vimrc
+
+" https://github.com/JetBrains/ideavim/wiki/sethandler
+sethandler <s-tab> a:vim
+sethandler <a-tab> a:vim
+sethandler <a-s-tab> a:vim
+sethandler <c-a> a:vim
+sethandler <c-b> a:vim
+sethandler <c-d> a:vim
+sethandler <c-e> a:vim
+sethandler <c-f> a:vim
+sethandler <c-g> a:vim
+sethandler <c-h> a:vim
+sethandler <c-i> a:vim
+sethandler <c-j> n-v:vim i:ide
+sethandler <c-k> n-v:vim i:ide
+sethandler <c-l> a:vim
+sethandler <c-m> a:vim
+sethandler <c-n> a:vim
+sethandler <c-o> a:vim
+sethandler <c-p> a:vim
+sethandler <c-r> a:vim
+sethandler <c-s> a:vim
+sethandler <c-t> a:vim
+sethandler <c-v> a:vim
+sethandler <c-w> a:vim
+
 set ideajoin
 set idearefactormode=keep
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
+
+" Some actions
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :wq<CR>
+nnoremap <leader>h :action HideAllWindows<CR>
+
+" Distraction Free Mode
+nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
+
+" Terminal
+nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
+nnoremap <leader>T :action TerminalNewSession<CR>
+
+" Moving tabs positions
+nnoremap <c-\> :action MoveTabRight<CR>
+nnoremap <c--> :action MoveTabDown<CR>
+nnoremap <c-=> :action Unsplit<CR>
+nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+" Moving between different groups and tabs
+nnoremap <tab> :action NextSplitter<CR>
+nnoremap <s-tab> :action PrevSplitter<CR>
+nnoremap <a-tab> :action NextTab<CR>
+nnoremap <a-s-tab> :action PreviousTab<CR>
+
+" Refactoring
+nnoremap <leader>rc :action IntroduceConstant<CR>
+vnoremap <leader>rc :action IntroduceConstant<CR>
+nnoremap <leader>rf :action RenameFile<CR>
+nnoremap <leader>ri :action Inline<CR>
+nnoremap <leader>rm :action ExtractMethod<CR>
+vnoremap <leader>rm :action ExtractMethod<CR>
+nnoremap <leader>rn :action RenameElement<CR>
+nnoremap <leader>ro :action OptimizeImports<CR>
+nnoremap <leader>rp :action Refactorings.QuickListPopupAction<CR>
+vnoremap <leader>rp :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>rv :action IntroduceVariable<CR>
+vnoremap <leader>rv :action IntroduceVariable<CR>
+
+nnoremap <Leader>= :action ReformatCode<CR>
+
+" Different popups with info and actions
+nnoremap <leader>c :action VcsShowCurrentChangeMarker<CR>
+nnoremap <leader>e :action ShowErrorDescription<CR>
+nnoremap <leader>g :action Generate<CR>
+nnoremap <leader>i :action ShowIntentionActions<CR>
+nnoremap <leader>k :action QuickImplementations<CR>
+nnoremap <leader>m :action ShowPopupMenu<CR>
+nnoremap <leader>s :action SurroundWith<CR>
+vnoremap <leader>s :action SurroundWith<CR>
+
+" Finding stuff around
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fe :action SearchEverywhere<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fi :action SelectIn<CR>
+nnoremap <leader>fl :action RecentLocations<CR>
+nnoremap <leader>fp :action FindInPath<CR>
+nnoremap <leader>fr :action RecentFiles<CR>
+nnoremap <leader>fs :action GotoSymbol<CR>
+nnoremap <leader>ft :action FileStructurePopup<CR>
+nnoremap <leader>fu :action FindUsages<CR>
+nnoremap <leader>fv :action SelectInProjectView<CR>
+nnoremap <leader>fw :action Switcher<CR>
+
+" Going places
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gy :action GotoTypeDeclaration<CR>
+nnoremap gt :action GotoTest<CR>
+
+"Back and forward
+nnoremap <c-o> :action Back<CR>
+nnoremap <c-i> :action Forward<CR>
+nnoremap ]c :action VcsShowNextChangeMarker<CR>
+nnoremap [c :action VcsShowPrevChangeMarker<CR>
+nnoremap ]e :action GotoNextError<CR>
+nnoremap [e :action GotoPreviousError<CR>
+
+" Running and Debugging
+nnoremap \R :action ChooseRunConfiguration<CR>
+nnoremap \D :action ChooseDebugConfiguration<CR>
+nnoremap \r :action RunClass<CR>
+nnoremap \d :action DebugClass<CR>
+nnoremap \u :action Rerun<CR>
+nnoremap \f :action RerunFailedTests<CR>
+nnoremap \s :action Stop<CR>
+nnoremap \e :action Resume<CR>
+nnoremap \b :action ToggleLineBreakpoint<CR>
+nnoremap \z :action StepOver<CR>
+nnoremap \x :action StepInto<CR>
+nnoremap \c :action StepOut<CR>
+nnoremap \v :action ViewBreakpoints<CR>
+nnoremap \a :action EvaluateExpression<CR>

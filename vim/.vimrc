@@ -53,9 +53,17 @@ let mapleader = " "
 
 "---- Normal mode mappings ----
 nnoremap Y y$
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
 
 " When doing J keep the cursor in place
 nnoremap J mzJ`z
+
+" Adding lines abover and below
+nnoremap <leader>O mzO<esc>`z
+nnoremap <leader>o mzo<esc>`z
 
 " Better window navigation
 nnoremap <C-h> <C-w>h
