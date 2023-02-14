@@ -34,6 +34,7 @@ let g:NERDTreeMapJumpParent='h'
 " Some actions
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :wq<CR>
+nnoremap <leader>Q :action CloseAllEditorsButActive<CR>
 nnoremap <leader>h :action HideAllWindows<CR>
 
 " Distraction Free Mode
