@@ -111,9 +111,3 @@ fi
 if [ -f ~/.zshrc_work ]; then
     source ~/.zshrc_work
 fi
-
-# Load Angular CLI autocompletion if the client is installed
-if command -v ng &> /dev/null
-then
-    source <(ng completion script)
-fi
