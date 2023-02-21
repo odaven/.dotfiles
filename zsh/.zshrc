@@ -2,9 +2,6 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
 
-# Add path for snap when in raspberry-pi
-export PATH="/snap/bin:$PATH"
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
