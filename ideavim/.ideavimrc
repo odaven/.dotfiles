@@ -25,6 +25,7 @@ sethandler <c-t> a:vim
 sethandler <c-v> a:vim
 sethandler <c-w> a:vim
 
+set easymotion
 set ideajoin
 set idearefactormode=keep
 set NERDTree
@@ -75,11 +76,12 @@ nnoremap <Leader>= :action ReformatCode<CR>
 " Different popups with info and actions
 nnoremap <leader>c :action VcsShowCurrentChangeMarker<CR>
 nnoremap <leader>e :action ShowErrorDescription<CR>
-nnoremap <leader>g :action Generate<CR>
+nnoremap <leader>g :action VcsGroups<CR>
 nnoremap <leader>i :action ShowIntentionActions<CR>
 nnoremap <leader>k :action QuickImplementations<CR>
 nnoremap <leader>m :action ShowPopupMenu<CR>
 nnoremap <leader>s :action SurroundWith<CR>
+nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 vnoremap <leader>s :action SurroundWith<CR>
 
 " Finding stuff around
