@@ -81,8 +81,8 @@ nnoremap <leader>i :action ShowIntentionActions<CR>
 nnoremap <leader>k :action QuickImplementations<CR>
 nnoremap <leader>m :action ShowPopupMenu<CR>
 nnoremap <leader>s :action SurroundWith<CR>
-nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 vnoremap <leader>s :action SurroundWith<CR>
+nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 
 " Finding stuff around
 nnoremap <leader>fa :action GotoAction<CR>
