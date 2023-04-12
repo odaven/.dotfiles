@@ -437,12 +437,12 @@ font:
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-shell:
-  program: /usr/local/bin/zsh
-  args:
-    - --login
-    - -c
-    - "tmux new-session -A -s bedrock"
+#shell:
+#  program: /usr/local/bin/zsh
+#  args:
+#    - --login
+#    - -c
+#    - "tmux new-session -A -s bedrock"
 
 
 # Startup directory

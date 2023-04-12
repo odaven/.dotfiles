@@ -111,3 +111,25 @@ fi
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# If tmux is not running check who is opening the terminal and open/attach the relevant session
+if [[ -z $TMUX ]]; then
+
+    case "${__CFBundleIdentifier}" in
+
+        "com.jetbrains.intellij")
+            session_name="intellij"
+            ;;
+
+        "com.microsoft.VSCode")
+            session_name="vscode"
+            ;;
+
+        *)
+            session_name="bedrock"
+            ;;
+
+    esac
+
+    tmux new-session -A -s "$session_name"
+fi
