@@ -78,8 +78,10 @@ nnoremap <leader>c :action VcsShowCurrentChangeMarker<CR>
 nnoremap <leader>e :action ShowErrorDescription<CR>
 nnoremap <leader>g :action VcsGroups<CR>
 nnoremap <leader>i :action ShowIntentionActions<CR>
+vnoremap <leader>i :action ShowIntentionActions<CR>
 nnoremap <leader>k :action QuickImplementations<CR>
 nnoremap <leader>m :action ShowPopupMenu<CR>
+vnoremap <leader>m :action ShowPopupMenu<CR>
 nnoremap <leader>s :action SurroundWith<CR>
 vnoremap <leader>s :action SurroundWith<CR>
 nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
