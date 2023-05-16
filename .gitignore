@@ -2,3 +2,4 @@
 *.swp
 neovim/nvim/plugin/packer_compiled.lua
 tmux/tmux/plugins/
+/lazygit/state.yml
