@@ -94,6 +94,7 @@ nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fi :action SelectIn<CR>
 nnoremap <leader>fl :action RecentLocations<CR>
 nnoremap <leader>fp :action FindInPath<CR>
+vnoremap <leader>fp :action FindInPath<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
 nnoremap <leader>fs :action GotoSymbol<CR>
 nnoremap <leader>ft :action FileStructurePopup<CR>
