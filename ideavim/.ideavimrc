@@ -89,6 +89,7 @@ nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 " Finding stuff around
 nnoremap <leader>fa :action GotoAction<CR>
 nnoremap <leader>fc :action GotoClass<CR>
+nnoremap <leader>fd :action GotoDatabaseObject<CR>
 nnoremap <leader>fe :action SearchEverywhere<CR>
 nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fi :action SelectIn<CR>
