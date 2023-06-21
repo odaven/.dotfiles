@@ -72,6 +72,12 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <Tab> <C-w>w
 
+" Changing editors sizes
+nnoremap <c-s-up> :resize -2<CR>
+nnoremap <c-s-down> :resize +2<CR>
+nnoremap <c-s-left> :vertical resize -2<CR>
+nnoremap <c-s-right> :vertical resize +2<CR>
+
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv

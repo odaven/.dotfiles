@@ -43,6 +43,12 @@ keymap("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
 keymap("n", "<Tab>", "<C-w>w", opts) -- Use Tab to move between open windows
 -- keymap("n", "<S-Tab>", "<C-w>w", opts) This one works so it could be useful in the future
 
+-- Changing editors sizes
+keymap("n", "<c-s-up>", ":resize -2<CR>", opts)
+keymap("n", "<c-s-down>",":resize +2<CR>", opts)
+keymap("n", "<c-s-left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<c-s-right>", ":vertical resize +2<CR>", opts)
+
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)
 keymap("n", "n", "nzzzv", opts)
