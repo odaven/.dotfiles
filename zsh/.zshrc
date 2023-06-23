@@ -1,3 +1,14 @@
+# For enabling tmux in IDE's terminals
+#if [[ -z $TMUX ]]; then
+#    case "$TERMINAL_EMULATOR" in
+#        "JetBrains-JediTerm") session_name="intellij" ;;
+#        "vscode-terminal") session_name="vscode" ;;
+#        *) session_name="bedrock" ;;
+#    esac
+#
+#    tmux new-session -A -s "$session_name"
+#fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
@@ -116,24 +127,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 
-# If tmux is not running check who is opening the terminal and open/attach the relevant session
-if [[ -z $TMUX ]]; then
-
-    case "${__CFBundleIdentifier}" in
-
-        "com.jetbrains.intellij")
-            session_name="intellij"
-            ;;
-
-        "com.microsoft.VSCode")
-            session_name="vscode"
-            ;;
-
-        *)
-            session_name="bedrock"
-            ;;
-
-    esac
-
-    tmux new-session -A -s "$session_name"
-fi
