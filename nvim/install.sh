@@ -2,7 +2,7 @@ DOTFILES="$HOME/.dotfiles"
 
 echo "[.dotfiles/neovim] Creating soft links"
 mkdir -p ~/.config
-ln -sfv "$DOTFILES"/neovim/nvim ~/.config
+ln -sfv "$DOTFILES"/nvim ~/.config
 
 echo "[.dotfiles/neovim] Install packer.nvim"
 rm -rf ~/.local/share/nvim
