@@ -9,6 +9,10 @@
 #    tmux new-session -A -s "$session_name"
 #fi
 
+# HISTFILE is used by interactive shells only.
+# Hence, we put it in .zshrc and don't export it.
+HISTFILE="$XDG_STATE_HOME"/zsh/history
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/python@3.10/bin:$PATH"
@@ -112,17 +116,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -f ~/.zsh_aliases ]; then
-    source ~/.zsh_aliases
+if [ -f "$ZDOTDIR"/aliases.zsh ]; then
+    source "$ZDOTDIR"/aliases.zsh
 fi
 
 if [ -f ~/.zshrc_work ]; then
     source ~/.zshrc_work
 fi
 
-export XDG_CONFIG_HOME="$HOME/.config"
-
-export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
