@@ -51,6 +51,12 @@ call plug#end()
 
 let mapleader = " "
 
+" Saving and quitting
+nnoremap <C-S> <ESC>:w<CR>
+inoremap <C-S> <ESC>:w<CR>
+nnoremap <C-Q> <ESC>:q<CR>
+inoremap <C-Q> <ESC>:q<CR>
+
 "---- Normal mode mappings ----
 nnoremap Y y$
 noremap <space>y "*y

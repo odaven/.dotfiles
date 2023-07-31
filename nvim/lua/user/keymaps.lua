@@ -19,6 +19,12 @@ vim.g.maplocalleader = " "
 --   command_mode = "c",
 
 
+-- Saving and quitting
+keymap("n", "<C-S>", "<ESC>:w<CR>", opts)
+keymap("i", "<C-S>", "<ESC>:w<CR>", opts)
+keymap("n", "<C-Q>", "<ESC>:q<CR>", opts)
+keymap("i", "<C-Q>", "<ESC>:q<CR>", opts)
+
 ------------------ Normal ------------------
 
 keymap("n", "<leader>y", "\"*y", opts)
