@@ -15,7 +15,10 @@ HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+export PATH="$PATH:/usr/local/opt/python@3.10/bin"
+
+# Add path for snap when in raspberry-pi
+export PATH="$PATH:/snap/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -24,7 +27,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="j"
+ZSH_THEME="j-all"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
