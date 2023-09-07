@@ -17,6 +17,10 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # Nvm
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 
+# Rust
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
+export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+
 # zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export ZSH_COMPDUMP="$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"

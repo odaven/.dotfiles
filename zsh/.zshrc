@@ -20,6 +20,9 @@ export PATH="$PATH:/usr/local/opt/python@3.10/bin"
 # Add path for snap when in raspberry-pi
 export PATH="$PATH:/snap/bin"
 
+# Add rust
+export PATH="$PATH:$CARGO_HOME/bin"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
