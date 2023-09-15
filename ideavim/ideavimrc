@@ -107,7 +107,7 @@ nnoremap gd :action GotoDeclaration<CR>
 nnoremap gy :action GotoTypeDeclaration<CR>
 nnoremap gt :action GotoTest<CR>
 
-"Back and forward
+" Back and forward
 nnoremap <c-o> :action Back<CR>
 nnoremap <c-i> :action Forward<CR>
 nnoremap ]c :action VcsShowNextChangeMarker<CR>
