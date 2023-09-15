@@ -23,6 +23,15 @@ export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
+export ZSH_CUSTOM="$ZDOTDIR"/oh-my-zsh/custom
 [ ! -d "$XDG_STATE_HOME"/zsh ] && mkdir -p "$XDG_STATE_HOME"/zsh
 [ ! -d "$XDG_CACHE_HOME"/zsh ] && mkdir -p "$XDG_CACHE_HOME"/zsh
+
+############ PATH ############
+# Rust
+export PATH="$PATH:$CARGO_HOME/bin"
+
+# Snap when in raspberry-pi
+export PATH="$PATH:/snap/bin"

@@ -17,8 +17,4 @@ ln -sfv "$DOTFILES"/zsh "$XDG_CONFIG_HOME"
 echo "[.dotfiles/zsh] Creating soft link"
 ln -sfv "$XDG_CONFIG_HOME"/zsh/.zshenv ~/.zshenv
 
-echo "[.dotfiles/zsh] Move oh-my-zsh themes to custom folder"
-cp -v "$XDG_CONFIG_HOME"/zsh/oh-my-zsh/themes/j.zsh-theme ~/.oh-my-zsh/custom/themes/
-cp -v "$XDG_CONFIG_HOME"/zsh/oh-my-zsh/themes/j-all.zsh-theme ~/.oh-my-zsh/custom/themes/
-
 echo "[.dotfiles/zsh] Restart to get the changes"
