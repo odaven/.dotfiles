@@ -18,6 +18,9 @@ export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 # Nvm
 export NVM_DIR="$XDG_DATA_HOME"/nvm
 
+# Ripgrep
+export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
+
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
