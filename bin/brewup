@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+brew update
+brew autoremove
+brew upgrade
+brew cleanup
+brew doctor
