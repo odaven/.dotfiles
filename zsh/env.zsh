@@ -8,6 +8,31 @@ export XDG_BIN_HOME=~/.local/bin
 # Dotfiles
 export DOTFILES="$HOME/.dotfiles"
 
+# Fzf
+export FZF_DEFAULT_COMMAND="fd"
+export FZF_DEFAULT_OPTS="
+  --info inline
+  --prompt 'All > '
+  --header '? Show preview'
+  --layout=reverse
+  --preview 'bat --color=always --style=numbers,changes {} 2> /dev/null || tree -C {}'
+  --preview-window right:50%:hidden:wrap
+  --bind '?:toggle-preview'
+  "
+
+export FZF_ALT_C_COMMAND="fd --type directory"
+export FZF_ALT_C_OPTS="
+  --prompt 'Folders > '
+  "
+
+export FZF_CTRL_R_OPTS="
+  --prompt 'History > '
+  --header 'CTRL-Y Paste to clipboard. ? Show preview'
+  --preview 'echo {}'
+  --preview-window down:3:hidden:wrap
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  "
+
 # Node
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/node_repl_history
 [ ! -d "$XDG_DATA_HOME"/node ] && mkdir -p "$XDG_DATA_HOME"/node
