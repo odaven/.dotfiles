@@ -49,6 +49,9 @@ export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
+# SQLite
+export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
+
 # zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export ZSH="$HOME/.oh-my-zsh"
