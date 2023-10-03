@@ -34,8 +34,7 @@ export FZF_CTRL_R_OPTS="
   "
 
 # Node
-export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/node_repl_history
-[ ! -d "$XDG_DATA_HOME"/node ] && mkdir -p "$XDG_DATA_HOME"/node
+export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # Npm
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
