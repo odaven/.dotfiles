@@ -9,3 +9,4 @@ alias ll='l -l'
 alias la='l -A'
 alias lla='la -l'
 
+alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME"/sqlite3/sqliterc'
