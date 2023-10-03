@@ -77,6 +77,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <Tab> <C-w>w
 
+nnoremap ]b :bnext<CR>
+nnoremap [b :bprev<CR>
+
 " Changing editors sizes
 nnoremap <c-s-up> :resize -2<CR>
 nnoremap <c-s-down> :resize +2<CR>

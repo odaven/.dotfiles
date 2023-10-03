@@ -52,8 +52,6 @@ nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 " Moving between different groups and tabs
 nnoremap <tab> :action NextSplitter<CR>
 nnoremap <s-tab> :action PrevSplitter<CR>
-nnoremap <a-tab> :action NextTab<CR>
-nnoremap <a-s-tab> :action PreviousTab<CR>
 
 " Refactoring
 nnoremap <leader>rc :action IntroduceConstant<CR>
@@ -110,6 +108,8 @@ nnoremap gt :action GotoTest<CR>
 " Back and forward
 nnoremap <c-o> :action Back<CR>
 nnoremap <c-i> :action Forward<CR>
+nnoremap ]b :action NextTab<CR>
+nnoremap [b :action PreviousTab<CR>
 nnoremap ]c :action VcsShowNextChangeMarker<CR>
 nnoremap [c :action VcsShowPrevChangeMarker<CR>
 nnoremap ]e :action GotoNextError<CR>
