@@ -63,10 +63,13 @@ export ZSH_CUSTOM="$ZDOTDIR"/oh-my-zsh/custom
 ############ PATH ############
 
 # .local/bin
-export PATH="$PATH:$XDG_BIN_HOME"
+export PATH="$XDG_BIN_HOME:$PATH"
 
 # Rust
-export PATH="$PATH:$CARGO_HOME/bin"
+export PATH="$CARGO_HOME/bin:$PATH"
 
 # Snap when in raspberry-pi
-export PATH="$PATH:/snap/bin"
+export PATH="/snap/bin:$PATH"
+
+# SQLite
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
