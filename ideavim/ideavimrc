@@ -24,6 +24,10 @@ sethandler <c-s> a:vim
 sethandler <c-t> a:vim
 sethandler <c-v> a:vim
 sethandler <c-w> a:vim
+sethandler <c-s-up> a:vim
+sethandler <c-s-down> a:vim
+sethandler <c-s-left> a:vim
+sethandler <c-s-right> a:vim
 
 set easymotion
 set ideajoin
@@ -42,6 +46,12 @@ nnoremap <c-z> :action ToggleDistractionFreeMode<CR>
 " Terminal
 nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
 nnoremap <leader>T :action TerminalNewSession<CR>
+
+" Change sizes
+nnoremap <c-s-up> :action StretchSplitToTop<CR>
+nnoremap <c-s-down> :action StretchSplitToBottom<CR>
+nnoremap <c-s-left> :action StretchSplitToLeft<CR>
+nnoremap <c-s-right> :action StretchSplitToRight<CR>
 
 " Moving tabs positions
 nnoremap <c-\> :action MoveTabRight<CR>
