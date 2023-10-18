@@ -66,8 +66,5 @@ export PATH="$XDG_BIN_HOME:$PATH"
 # Rust
 export PATH="$CARGO_HOME/bin:$PATH"
 
-# Snap when in raspberry-pi
-export PATH="/snap/bin:$PATH"
-
 # SQLite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"

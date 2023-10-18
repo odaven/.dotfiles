@@ -51,6 +51,9 @@ echo
 echo "[.dotfiles/raspberry-pi] Finishing"
 sudo apt --assume-yes autoremove
 
+echo "[.dotfiles/raspberry-pi] Creating soft link"
+ln -sfv "$DOTFILES"/raspberry-pi/.zshenv-local ~
+
 files_to_delete=(
 "$HOME/.bash_history"
 "$HOME/.bash_logout"

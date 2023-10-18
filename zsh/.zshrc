@@ -21,8 +21,6 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f "$ZDOTDIR"/aliases.zsh ] && source "$ZDOTDIR"/aliases.zsh
 
-[ -f ~/.zshenv-local ] && source ~/.zshenv-local
-
 [ -f "$XDG_CONFIG_HOME"/fzf/fzf.zsh ] && source "$XDG_CONFIG_HOME"/fzf/fzf.zsh
 
 # For FZF: Alt-C in Macos writes "ç". So I bind that character to show directories
@@ -30,3 +28,5 @@ source $ZSH/oh-my-zsh.sh
 bindkey "ç" fzf-cd-widget
 
 bindkey -s ^f "tmux-sessionizer\n"
+
+[ -f ~/.zshenv-local ] && source ~/.zshenv-local
