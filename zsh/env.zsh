@@ -39,9 +39,6 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 # Npm
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
-# Nvm
-export NVM_DIR="$XDG_DATA_HOME"/nvm
-
 # Ripgrep
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
 
@@ -57,6 +54,7 @@ export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 export ZSH_CUSTOM="$ZDOTDIR"/oh-my-zsh/custom
+export SHELL_SESSIONS_DISABLE=1
 [ ! -d "$XDG_STATE_HOME"/zsh ] && mkdir -p "$XDG_STATE_HOME"/zsh
 [ ! -d "$XDG_CACHE_HOME"/zsh ] && mkdir -p "$XDG_CACHE_HOME"/zsh
 
