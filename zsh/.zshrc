@@ -30,3 +30,4 @@ bindkey "ç" fzf-cd-widget
 bindkey -s ^f "tmux-sessionizer\n"
 
 [ -f ~/.zshenv-local ] && source ~/.zshenv-local
+[ -f ~/.zshenv-private ] && source ~/.zshenv-private
