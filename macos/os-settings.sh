@@ -17,3 +17,6 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # Fast keyrepeat and short delay until key repeat
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
+# Remove beep on error
+defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0
