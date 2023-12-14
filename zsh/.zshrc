@@ -14,7 +14,7 @@
 HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 # Oh my zsh plugins
-plugins=(git mvn)
+plugins=(git)
 
 ZSH_THEME="j-all"
 source $ZSH/oh-my-zsh.sh
