@@ -30,4 +30,4 @@ echo "[.dotfiles/macos] Ideavim configuration"
 source "$DOTFILES"/ideavim/install.sh
 
 echo "[.dotfiles/raspberry-pi] Creating soft link"
-ln -sfv "$DOTFILES"/macos/.zshenv-local ~
+ln -sfv "$DOTFILES"/macos/zsh-local ~/.config
