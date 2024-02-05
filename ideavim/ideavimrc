@@ -140,3 +140,6 @@ nnoremap \x :action StepInto<CR>
 nnoremap \c :action StepOut<CR>
 nnoremap \v :action ViewBreakpoints<CR>
 nnoremap \a :action EvaluateExpression<CR>
+
+" Easymotion
+nmap s <Plug>(easymotion-s)
