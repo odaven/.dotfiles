@@ -18,7 +18,6 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-
 -- Saving and quitting
 keymap("n", "<C-S>", "<ESC>:w<CR>", opts)
 keymap("i", "<C-S>", "<ESC>:w<CR>", opts)
@@ -27,25 +26,20 @@ keymap("i", "<C-Q>", "<ESC>:q<CR>", opts)
 
 ------------------ Normal ------------------
 
-keymap("n", "<leader>y", "\"*y", opts)
-keymap("v", "<leader>y", "\"*y", opts)
-keymap("n", "<leader>Y", "\"*Y", opts)
-keymap("n", "<leader>p", "\"*p", opts)
-keymap("n", "<leader>P", "\"*P", opts)
+keymap("n", "<leader>y", '"*y', opts)
+keymap("v", "<leader>y", '"*y', opts)
+keymap("n", "<leader>Y", '"*Y', opts)
+keymap("n", "<leader>p", '"*p', opts)
+keymap("n", "<leader>P", '"*P', opts)
 
 -- When doing J keep the cursor in place
 keymap("n", "J", "mzJ`z", opts)
 
-
 -- Adding lines abover and below
-keymap("n","<leader>O", "mzO<esc>`z", opts)
-keymap("n","<leader>o", "mzo<esc>`z", opts)
+keymap("n", "<leader>O", "mzO<esc>`z", opts)
+keymap("n", "<leader>o", "mzo<esc>`z", opts)
 
 -- Better window navigation
-keymap("n", "<C-h>", ":TmuxNavigateLeft<CR>", opts)
-keymap("n", "<C-j>", ":TmuxNavigateDown<CR>", opts)
-keymap("n", "<C-k>", ":TmuxNavigateUp<CR>", opts)
-keymap("n", "<C-l>", ":TmuxNavigateRight<CR>", opts)
 keymap("n", "<Tab>", "<C-w>w", opts) -- Use Tab to move between open windows
 -- keymap("n", "<S-Tab>", "<C-w>w", opts) This one works so it could be useful in the future
 
@@ -54,7 +48,7 @@ keymap("n", "[b", ":bprev<CR>", opts)
 
 -- Changing editors sizes
 keymap("n", "<c-s-up>", ":resize -2<CR>", opts)
-keymap("n", "<c-s-down>",":resize +2<CR>", opts)
+keymap("n", "<c-s-down>", ":resize +2<CR>", opts)
 keymap("n", "<c-s-left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<c-s-right>", ":vertical resize +2<CR>", opts)
 
@@ -68,14 +62,11 @@ keymap("n", "N", "Nzzzv", opts)
 -- keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 -- keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
-
 -- Navigate buffers
 -- keymap("n", "<S-l>", ":bnext<CR>", opts)
 -- keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
-
 ------------------ Insert ------------------
-
 
 ------------------ Visual ------------------
 -- Stay in indent mode
@@ -89,14 +80,12 @@ keymap("v", "K", ":move '<-2<CR>gv=gv", opts)
 -- keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 -- keymap("v", "p", '"_dP', opts)
 
-
 ------------------ Visual Block ------------------
 -- Move text up and down
 keymap("x", "J", ":move '>+1<CR>gv=gv", opts)
 keymap("x", "K", ":move '<-2<CR>gv=gv", opts)
 -- keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 -- keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
 
 ------------------ Terminal ------------------
 -- Better terminal navigation
