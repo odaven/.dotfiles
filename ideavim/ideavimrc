@@ -29,10 +29,19 @@ sethandler <c-s-down> a:vim
 sethandler <c-s-left> a:vim
 sethandler <c-s-right> a:vim
 
+set commentary
 set easymotion
+set highlightedyank
 set ideajoin
 set idearefactormode=keep
 set NERDTree
+set quickscope
+set surround
+set which-key
+
+" which-key stays now in screen
+set notimeout
+
 let g:NERDTreeMapActivateNode='l'
 let g:NERDTreeMapJumpParent='h'
 
