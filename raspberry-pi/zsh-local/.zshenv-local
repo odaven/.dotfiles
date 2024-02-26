@@ -1,3 +1,0 @@
-export DOTFILES_RASPBERRY_PI="$HOME/.dotfiles"
-
-export PATH="/snap/bin:$PATH"

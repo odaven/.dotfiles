@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+[ ! -d "$HOME"/.local ] && mkdir "$HOME"/.local
+ln -sfv "$HOME"/.dotfiles/bin "$HOME"/.local

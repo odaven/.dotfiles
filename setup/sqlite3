@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+ln -sfv "$HOME"/.dotfiles/config/sqlite3 "$HOME"/.config
