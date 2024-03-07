@@ -105,19 +105,25 @@ nnoremap <leader>v :action Vcs.QuickListPopupAction<CR>
 " Finding stuff around
 nnoremap <leader>fa :action GotoAction<CR>
 nnoremap <leader>fc :action GotoClass<CR>
+vnoremap <leader>fc :action GotoClass<CR>
 nnoremap <leader>fd :action GotoDatabaseObject<CR>
 nnoremap <leader>fe :action SearchEverywhere<CR>
+vnoremap <leader>fe :action SearchEverywhere<CR>
 nnoremap <leader>ff :action GotoFile<CR>
+vnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fi :action SelectIn<CR>
 nnoremap <leader>fl :action RecentLocations<CR>
 nnoremap <leader>fp :action FindInPath<CR>
 vnoremap <leader>fp :action FindInPath<CR>
 nnoremap <leader>fr :action RecentFiles<CR>
 nnoremap <leader>fs :action GotoSymbol<CR>
+vnoremap <leader>fs :action GotoSymbol<CR>
 nnoremap <leader>ft :action FileStructurePopup<CR>
 nnoremap <leader>fu :action FindUsages<CR>
 nnoremap <leader>fv :action SelectInProjectView<CR>
 nnoremap <leader>fw :action Switcher<CR>
+nnoremap <leader>fx :action TextSearchAction<CR>
+vnoremap <leader>fx :action TextSearchAction<CR>
 
 " Going places
 nnoremap gd :action GotoDeclaration<CR>
@@ -133,6 +139,8 @@ nnoremap ]c :action VcsShowNextChangeMarker<CR>
 nnoremap [c :action VcsShowPrevChangeMarker<CR>
 nnoremap ]e :action GotoNextError<CR>
 nnoremap [e :action GotoPreviousError<CR>
+nnoremap ]m :action MethodDown<CR>
+nnoremap [m :action MethodUp<CR>
 
 " Running and Debugging
 nnoremap \R :action ChooseRunConfiguration<CR>
