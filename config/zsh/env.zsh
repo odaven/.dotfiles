@@ -1,11 +1,11 @@
 #!/usr/bin/env zsh
 
 # XDG
-export XDG_BIN_HOME=~/.local/bin
-export XDG_CACHE_HOME=~/.cache
-export XDG_CONFIG_HOME=~/.config
-export XDG_DATA_HOME=~/.local/share
-export XDG_STATE_HOME=~/.local/state
+export XDG_BIN_HOME="$HOME"/.local/bin
+export XDG_CACHE_HOME="$HOME"/.cache
+export XDG_CONFIG_HOME="$HOME"/.config
+export XDG_DATA_HOME="$HOME"/.local/share
+export XDG_STATE_HOME="$HOME"/.local/state
 
 # Dotfiles
 export DOTFILES="$HOME/.dotfiles"
@@ -53,7 +53,7 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 # SQLite
-export SQLITE_HISTORY=$XDG_DATA_HOME/sqlite_history
+export SQLITE_HISTORY="$XDG_DATA_HOME"/sqlite_history
 
 # zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
@@ -68,6 +68,9 @@ export SHELL_SESSIONS_DISABLE=1
 
 # .local/bin
 export PATH="$XDG_BIN_HOME:$PATH"
+
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Rust
 export PATH="$CARGO_HOME/bin:$PATH"
