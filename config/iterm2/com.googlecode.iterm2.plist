@@ -832,11 +832,6 @@
 	<false/>
 	<key>PointerActions</key>
 	<dict>
-		<key>Button,1,1,,</key>
-		<dict>
-			<key>Action</key>
-			<string>kContextMenuPointerAction</string>
-		</dict>
 		<key>Button,2,1,,</key>
 		<dict>
 			<key>Action</key>
