@@ -51,6 +51,9 @@ require("lazy").setup({
     -- Extras tests
     { import = "lazyvim.plugins.extras.test.core" },
 
+    -- Extra vscode
+    { import = "lazyvim.plugins.extras.vscode" },
+
     -- import/override with your plugins
     { import = "plugins" },
   },
