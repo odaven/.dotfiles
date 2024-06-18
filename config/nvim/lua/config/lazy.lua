@@ -51,9 +51,6 @@ require("lazy").setup({
     -- Extras tests
     { import = "lazyvim.plugins.extras.test.core" },
 
-    -- Extras UI
-    { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
-
     -- import/override with your plugins
     { import = "plugins" },
   },
