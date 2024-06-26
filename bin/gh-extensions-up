@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+gh extension upgrade gh-copilot
