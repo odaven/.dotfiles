@@ -12,49 +12,6 @@ require("lazy").setup({
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
 
-    -- Extras coding
-    { import = "lazyvim.plugins.extras.coding.copilot-chat" },
-    { import = "lazyvim.plugins.extras.coding.copilot" },
-    { import = "lazyvim.plugins.extras.coding.mini-surround" },
-
-    -- Extras dap
-    { import = "lazyvim.plugins.extras.dap.core" },
-
-    -- Extras editor
-    { import = "lazyvim.plugins.extras.editor.dial" },
-    { import = "lazyvim.plugins.extras.editor.fzf" },
-    { import = "lazyvim.plugins.extras.editor.harpoon2" },
-    { import = "lazyvim.plugins.extras.editor.inc-rename" },
-    { import = "lazyvim.plugins.extras.editor.outline" },
-    { import = "lazyvim.plugins.extras.editor.refactoring" },
-
-    -- Extras formatting
-    { import = "lazyvim.plugins.extras.formatting.black" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
-
-    -- Extras lint
-    { import = "lazyvim.plugins.extras.linting.eslint" },
-
-    -- Extras lang
-    { import = "lazyvim.plugins.extras.lang.ansible" },
-    { import = "lazyvim.plugins.extras.lang.docker" },
-    { import = "lazyvim.plugins.extras.lang.json" },
-    { import = "lazyvim.plugins.extras.lang.markdown" },
-    { import = "lazyvim.plugins.extras.lang.python" },
-    { import = "lazyvim.plugins.extras.lang.rust" },
-    { import = "lazyvim.plugins.extras.lang.terraform" },
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.yaml" },
-
-    -- Extras lsp
-    { import = "lazyvim.plugins.extras.lsp.none-ls" },
-
-    -- Extras tests
-    { import = "lazyvim.plugins.extras.test.core" },
-
-    -- Extra vscode
-    { import = "lazyvim.plugins.extras.vscode" },
-
     -- import/override with your plugins
     { import = "plugins" },
   },
