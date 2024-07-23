@@ -10,6 +10,9 @@ export XDG_STATE_HOME="$HOME"/.local/state
 # Dotfiles
 export DOTFILES="$HOME/.dotfiles"
 
+# Editor
+export EDITOR="nvim"
+
 # Fzf
 export FZF_DEFAULT_COMMAND="fd"
 export FZF_DEFAULT_OPTS="
