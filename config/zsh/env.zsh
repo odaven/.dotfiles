@@ -40,6 +40,8 @@ export FZF_CTRL_R_OPTS="
 
 # Go
 export GOPATH="$XDG_DATA_HOME"/go
+export GOBIN="$GOPATH/bin"
+export GOCACHE="$XDG_CACHE_HOME"/go-build
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
 # Node
@@ -71,6 +73,9 @@ export SHELL_SESSIONS_DISABLE=1
 
 # .local/bin
 export PATH="$XDG_BIN_HOME:$PATH"
+
+# Go
+export PATH="$GOBIN:$PATH"
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
