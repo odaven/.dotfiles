@@ -69,19 +69,3 @@ export SHELL_SESSIONS_DISABLE=1
 [ ! -d "$XDG_STATE_HOME"/zsh ] && mkdir -p "$XDG_STATE_HOME"/zsh
 [ ! -d "$XDG_CACHE_HOME"/zsh ] && mkdir -p "$XDG_CACHE_HOME"/zsh
 
-############ PATH ############
-
-# .local/bin
-export PATH="$XDG_BIN_HOME:$PATH"
-
-# Go
-export PATH="$GOBIN:$PATH"
-
-# Homebrew
-export PATH="/opt/homebrew/bin:$PATH"
-
-# Rust
-export PATH="$CARGO_HOME/bin:$PATH"
-
-# SQLite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
