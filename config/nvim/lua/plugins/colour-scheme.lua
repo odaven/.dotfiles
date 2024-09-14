@@ -9,6 +9,11 @@ return {
       dim_inactive = {
         enabled = true,
       },
+      color_overrides = {
+        mocha = {
+          base = "#000000",
+        },
+      },
     },
   },
   {
