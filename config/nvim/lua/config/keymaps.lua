@@ -36,13 +36,6 @@ vim.keymap.set("n", "#", "#zz", { desc = "Prev Search Result" })
 vim.keymap.set("x", "J", ":move '>+1<CR>gv=gv", { desc = "Move down selected lines", silent = true })
 vim.keymap.set("x", "K", ":move '<-2<CR>gv=gv", { desc = "Move up selected lines", silent = true })
 
--- Copy and paste with clipboard
-vim.keymap.set("n", "<leader>y", '"*y', { desc = "Copy in clipboard" })
-vim.keymap.set("v", "<leader>y", '"*y', { desc = "Copy in clipboard" })
-vim.keymap.set("n", "<leader>Y", '"*Y', { desc = "Copy line in clipboard" })
-vim.keymap.set("n", "<leader>p", '"*p', { desc = "Paste below from clipboard" })
-vim.keymap.set("n", "<leader>P", '"*P', { desc = "Paste above from clipboard" })
-
 -- stylua: ignore
 -- For some reason, this keymap sometimes dissapears so I set it again here
 -- vim.keymap.set("n", "<leader>tr", function() require("neotest").run.run() end, { desc = "Run Nearest" })
