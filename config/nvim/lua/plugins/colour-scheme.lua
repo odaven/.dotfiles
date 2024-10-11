@@ -1,5 +1,22 @@
 return {
   {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      dimInactive = true,
+      colors = {
+        theme = {
+          wave = {
+            ui = {
+              bg = "#000000",
+            },
+          },
+        },
+      },
+    },
+  },
+  {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
