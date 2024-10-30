@@ -17,8 +17,6 @@ export EDITOR="nvim"
 export FZF_DEFAULT_COMMAND="fd"
 export FZF_DEFAULT_OPTS="
   --info inline
-  --prompt 'All > '
-  --header '? Show preview'
   --layout=reverse
   --preview 'bat --color=always --style=numbers,changes {} 2> /dev/null || tree -C {}'
   --preview-window right:50%:hidden:wrap
@@ -28,6 +26,7 @@ export FZF_DEFAULT_OPTS="
 export FZF_ALT_C_COMMAND="fd --type directory"
 export FZF_ALT_C_OPTS="
   --prompt 'Folders > '
+  --header '? Show preview'
   "
 
 export FZF_CTRL_R_OPTS="
