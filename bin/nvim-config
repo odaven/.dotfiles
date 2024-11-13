@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+if [[ "$1" == "dev" ]]; then
+  ln -sfv "$HOME"/Dev/nvim "$HOME"/.config
+elif [[ "$1" == "dot" ]]; then
+  ln -sfv "$HOME"/.dotfiles/config/nvim "$HOME"/.config
+else
+  echo "Invalid paramter. Valid options are: dev, dot"
+fi

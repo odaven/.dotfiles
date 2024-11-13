@@ -7,6 +7,6 @@ sudo apt --assume-yes install curl git zsh
 sudo chsh -s $(which zsh) $(whoami)
 
 rm -rf "$HOME"/.dotfiles
-git clone -b master https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
+git clone --recurse-submodules -b master https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
 
 "$HOME"/.dotfiles/systems/raspberry-pi/install
