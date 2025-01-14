@@ -18,4 +18,5 @@ create_xdg_folders
 
 run_setup_all
 
+ln -sfv "$HOME"/.dotfiles/systems/macos/git-local "$HOME"/.config
 ln -sfv "$HOME"/.dotfiles/systems/macos/zsh-local "$HOME"/.config

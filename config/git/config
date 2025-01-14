@@ -1,0 +1,27 @@
+[commit]
+  verbose = true
+
+[init]
+  defaultBranch = master
+
+[pull]
+  ff = only
+
+[push]
+  autoSetupRemote = true
+  
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
+# Source tree configuration
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+
+# Local configuration for the machine last to override the one above
+[include]
+  path = ~/.config/git-local/config
