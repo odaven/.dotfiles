@@ -19,5 +19,8 @@ export PATH="$CARGO_HOME/bin:$PATH"
 # SQLite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
+# Add Visual Studio Code (code)
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+
 # .local/bin
 export PATH="$XDG_BIN_HOME:$PATH"
