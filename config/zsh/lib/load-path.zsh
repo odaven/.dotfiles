@@ -8,7 +8,9 @@
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Curl
-export PATH="$(brew --prefix)/opt/curl/bin:$PATH"
+if command -v brew &> /dev/null; then
+    export PATH="$(brew --prefix curl)/bin:$PATH"
+fi
 
 # Go
 export PATH="$GOBIN:$PATH"
