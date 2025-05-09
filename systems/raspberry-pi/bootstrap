@@ -8,17 +8,21 @@ create_xdg_folders
 
 echo "--- Raspberry Pi Setup ---"
 
-sudo apt update -y && sudo apt upgrade -y
+sudo apt update -yq && sudo apt upgrade -yq
 
-sudo apt install -y \
-    bat cmake curl fd-find fzf git lazygit ripgrep snapd tmux vim wget zsh
+sudo apt install -yqm \
+    bat cmake curl fd-find git ripgrep tmux vim wget zsh
 
-sudo apt autoremove -y
+sudo apt autoremove -yq
+sudo apt clean -yq
 
 # Install starship
 sudo curl -sS https://starship.rs/install.sh | sh -s -- -y
 
-"$HOME"/.dotfiles/bin/dotfiles-link bat bin fzf git lazygit ripgrep starship tmux vim zsh
+# Rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+"$HOME"/.dotfiles/bin/dotfiles-link bat bin git ripgrep starship tmux vim zsh
 "$HOME"/.dotfiles/bin/dotfiles-setup --all
 
 ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh "$HOME"/.config/zsh-local

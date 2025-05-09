@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 set -e
 
-sudo apt -y update && sudo apt -y upgrade
-sudo apt -y install curl git zsh
+sudo apt update -yq
+sudo apt upgrade -yq
+sudo apt install -yqm curl git zsh
 
 sudo chsh -s $(which zsh) $(whoami)
 
