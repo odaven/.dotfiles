@@ -13,7 +13,7 @@ create_xdg_folders
 ## Install homebrew
 NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-brew bundle install --verbose --no-lock --file "$HOME"/.dotfiles/systems/macos/Brewfile
+brew bundle install --cleanup --file "$HOME"/.dotfiles/systems/macos/Brewfile
 
 "$HOME"/.dotfiles/systems/macos/os-settings
 
