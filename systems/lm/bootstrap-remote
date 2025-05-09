@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt install -y git zsh
+
+rm -rf "$HOME"/.dotfiles
+
+git clone --recurse-submodules -b lm https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
+git -C "$HOME"/.dotfiles submodule update --remote
+
+"$HOME"/.dotfiles/systems/lm/bootstrap

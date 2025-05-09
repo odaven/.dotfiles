@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+sudo apt-get update -y && sudo apt upgrade -y
+
+sudo apt purge bluez blueman
+sudo apt install bluez blueman
