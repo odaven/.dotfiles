@@ -34,13 +34,7 @@ create_link() {
 # Run all tasks
 run_all() {
   for key in "${(@k)CONFIGS}"; do
-    if [[ "${CONFIGS[$key]}" == link_* ]]; then
-      echo "Running custom method for $key..."
-      "${CONFIGS[$key]}"
-    else
-      echo "Linking $key..."
       create_link "${CONFIGS[$key]}"
-    fi
   done
 }
 
@@ -61,7 +55,6 @@ for option in "$@"; do
     echo "Running all tasks..."
     run_all
   elif [[ -n "${CONFIGS[$option]}" ]]; then
-    echo "Linking $option..."
     create_link "${CONFIGS[$option]}"
   else
     echo "Error: '$option' is not a valid option."

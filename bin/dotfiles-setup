@@ -2,10 +2,15 @@
 
 # Define a mapping of configurations
 declare -A CONFIGS=(
+  [rust]="setup_rust"
   [tmux]="setup_tmux"
   [vim]="setup_vim"
   [zsh]="setup_zsh"
 )
+
+setup_rust() {
+  rustup default stable
+}
 
 setup_tmux() {
   # Just in case already exist
