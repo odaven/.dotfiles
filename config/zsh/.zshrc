@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 
-for config_file in "$ZDOTDIR"/lib/*.zsh; do
+for config_file in "$ZDOTDIR"/zshrc.d/*.zsh; do
   source "$config_file"
 done

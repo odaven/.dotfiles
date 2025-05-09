@@ -1,0 +1,70 @@
+#!/usr/bin/env zsh
+
+# Define a mapping of configurations
+declare -A CONFIGS=(
+  [alacritty]="$HOME/.dotfiles/config/alacritty:$HOME/.config"
+  [bat]="$HOME/.dotfiles/config/bat:$HOME/.config"
+  [bin]="$HOME/.dotfiles/bin:$HOME/.local"
+  [fzf]="$HOME/.dotfiles/config/fzf:$HOME/.config"
+  [git]="$HOME/.dotfiles/config/git:$HOME/.config"
+  [ideavim]="$HOME/.dotfiles/config/ideavim:$HOME/.config"
+  [iterm2]="$HOME/.dotfiles/config/iterm2:$HOME/.config"
+  [lazygit]="$HOME/.dotfiles/config/lazygit:$HOME/.config"
+  [neovim]="$HOME/.dotfiles/config/nvim:$HOME/.config"
+  [npm]="$HOME/.dotfiles/config/npm:$HOME/.config"
+  [ripgrep]="$HOME/.dotfiles/config/ripgrep:$HOME/.config"
+  [sqlite3]="$HOME/.dotfiles/config/sqlite3:$HOME/.config"
+  [starship]="$HOME/.dotfiles/config/starship/starship.toml:$HOME/.config/starship.toml"
+  [tmux]="$HOME/.dotfiles/config/tmux:$HOME/.config"
+  [vim]="$HOME/.dotfiles/config/vim/.vimrc:$HOME/.vimrc"
+  [zsh]="$HOME/.config/zsh/.zshenv:$HOME/.zshenv"
+)
+
+# Function to create symbolic links
+create_link() {
+  local source target
+  IFS=":" read -r source target <<< "$1"
+  if [[ -e "$source" ]]; then
+    ln -sfv "$source" "$target"
+  else
+    echo "Warning: Source '$source' does not exist. Skipping..."
+  fi
+}
+
+# Run all tasks
+run_all() {
+  for key in "${(@k)CONFIGS}"; do
+    if [[ "${CONFIGS[$key]}" == link_* ]]; then
+      echo "Running custom method for $key..."
+      "${CONFIGS[$key]}"
+    else
+      echo "Linking $key..."
+      create_link "${CONFIGS[$key]}"
+    fi
+  done
+}
+
+# Main logic
+if [[ $# -eq 0 ]]; then
+  cat <<EOF
+Usage: dotfiles-link <option>
+Examples:
+  dotfiles-link --all             # Run all tasks
+  dotfiles-link neovim            # Run only the Neovim task
+  dotfiles-link neovim zsh        # Run Neovim and Zsh tasks
+EOF
+  exit 1
+fi
+
+for option in "$@"; do
+  if [[ "$option" == "--all" ]]; then
+    echo "Running all tasks..."
+    run_all
+  elif [[ -n "${CONFIGS[$option]}" ]]; then
+    echo "Linking $option..."
+    create_link "${CONFIGS[$option]}"
+  else
+    echo "Error: '$option' is not a valid option."
+    exit 1
+  fi
+done

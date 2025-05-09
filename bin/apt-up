@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+sudo apt update -y && sudo apt upgrade -y
+sudo apt autoremove --purge -y
+sudo apt autoclean -y

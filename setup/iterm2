@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-
-ln -sfv "$HOME"/.dotfiles/config/iterm2 "$HOME"/.config

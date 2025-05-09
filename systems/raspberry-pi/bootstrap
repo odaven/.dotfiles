@@ -1,0 +1,32 @@
+#!/usr/bin/env zsh
+
+source "$HOME"/.dotfiles/config/zsh/zshrc.d/00-env.zsh
+source "$HOME"/.dotfiles/lib/functions.zsh
+
+# Creating folders
+create_xdg_folders
+
+echo "--- Raspberry Pi Setup ---"
+
+sudo apt update -y && sudo apt upgrade -y
+
+sudo apt install -y \
+    bat cmake curl fd-find fzf git lazygit ripgrep snapd tmux vim wget zsh
+
+sudo apt autoremove -y
+
+# Install starship
+sudo curl -sS https://starship.rs/install.sh | sh -s -- -y
+
+"$HOME"/.dotfiles/bin/dotfiles-link bat bin fzf git lazygit ripgrep starship tmux vim zsh
+"$HOME"/.dotfiles/bin/dotfiles-setup --all
+
+ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh "$HOME"/.config/zsh-local
+
+# Delete unnecessary files
+rm -f "$HOME"/.bash_history "$HOME"/.bash_logout "$HOME"/.bashrc \
+      "$HOME"/.profile "$HOME"/.zshrc "$HOME"/.zsh_history
+
+sudo chsh -s $(which zsh) $(whoami)
+
+exit 0
