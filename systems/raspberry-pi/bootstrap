@@ -25,7 +25,7 @@ sudo curl -sS https://starship.rs/install.sh | sh -s -- -y
 # Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-"$HOME"/.dotfiles/bin/dotfiles-link bat bin git ripgrep starship tmux vim zsh
+"$HOME"/.dotfiles/bin/dotfiles-link --all
 "$HOME"/.dotfiles/bin/dotfiles-setup --all
 
 ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh-local "$HOME"/.config
