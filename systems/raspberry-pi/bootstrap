@@ -28,7 +28,7 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 "$HOME"/.dotfiles/bin/dotfiles-link bat bin git ripgrep starship tmux vim zsh
 "$HOME"/.dotfiles/bin/dotfiles-setup --all
 
-ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh "$HOME"/.config/zsh-local
+ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh-local "$HOME"/.config
 
 # Delete unnecessary files
 rm -f "$HOME"/.bash_history "$HOME"/.bash_logout "$HOME"/.bashrc \

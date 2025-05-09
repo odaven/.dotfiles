@@ -20,5 +20,5 @@ brew bundle install --cleanup --file "$HOME"/.dotfiles/systems/macos/Brewfile
 "$HOME"/.dotfiles/bin/dotfiles-link --all
 "$HOME"/.dotfiles/bin/dotfiles-setup --all
 
-ln -sfv "$HOME"/.dotfiles/systems/macos/zsh "$HOME"/.config/zsh-local
+ln -sfv "$HOME"/.dotfiles/systems/macos/zsh-local "$HOME"/.config
 
