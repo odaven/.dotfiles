@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
+
+# Ask sudo first
+sudo -v
+
 set -e
 
 sudo apt update -yq

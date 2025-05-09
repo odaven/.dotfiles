@@ -1,5 +1,8 @@
 #!/usr/bin/env zsh
 
+# Ask sudo first
+sudo -v
+
 rm -rf "$HOME"/.dotfiles
 git clone --recurse-submodules -b dev https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
 
