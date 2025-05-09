@@ -4,7 +4,7 @@ alias does_it_work='echo It does work'
 
 alias lg='lazygit'
 
-alias ls='ls -Fh --color=auto'
+alias ls='ls -FhL --color=auto'
 alias l='ls'
 alias ll='l -l'
 alias la='l -A'
