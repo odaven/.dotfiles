@@ -17,7 +17,8 @@ declare -A CONFIGS=(
   [starship]="$HOME/.dotfiles/config/starship/starship.toml:$HOME/.config/starship.toml"
   [tmux]="$HOME/.dotfiles/config/tmux:$HOME/.config"
   [vim]="$HOME/.dotfiles/config/vim/.vimrc:$HOME/.vimrc"
-  [zsh]="$HOME/.config/zsh/.zshenv:$HOME/.zshenv"
+  [zsh]="$HOME/.dotfiles/config/zsh:$HOME/.config"
+  [zshenv]="$HOME/.dotfiles/config/zsh/.zshenv:$HOME/.zshenv"
 )
 
 # Function to create symbolic links
