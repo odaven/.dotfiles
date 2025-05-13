@@ -43,6 +43,9 @@ export GOBIN="$GOPATH/bin"
 export GOCACHE="$XDG_CACHE_HOME"/go-build
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
 
+# Neovim as manpager
+export MANPAGER='nvim +Man!'
+
 # Node
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
