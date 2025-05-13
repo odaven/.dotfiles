@@ -44,7 +44,8 @@ if [[ $# -eq 0 ]]; then
   cat <<EOF
 Usage: dotfiles-link <option>
 Examples:
-  dotfiles-link --all             # Run all tasks
+  dotfiles-link -a                # Run all tasks (--all or -a)
+  dotfiles-link -l                # List available options (--list or -l)
   dotfiles-link neovim            # Run only the Neovim task
   dotfiles-link neovim zsh        # Run Neovim and Zsh tasks
 EOF
@@ -52,9 +53,14 @@ EOF
 fi
 
 for option in "$@"; do
-  if [[ "$option" == "--all" ]]; then
+  if [[ "$option" == "--all" || "$option" == "-a" ]]; then
     echo "Running all tasks..."
     run_all
+  elif [[ "$option" == "--list" || "$option" == "-l" ]]; then
+    echo "Available options:"
+    for key in "${(@k)CONFIGS}"; do
+      echo "  $key"
+    done
   elif [[ -n "${CONFIGS[$option]}" ]]; then
     create_link "${CONFIGS[$option]}"
   else

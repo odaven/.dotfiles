@@ -55,7 +55,8 @@ if [[ $# -eq 0 ]]; then
   cat <<EOF
 Usage: dotfiles-setup <option>
 Examples:
-  dotfiles-setup --all             # Run all setup tasks
+  dotfiles-setup -a                # Run all setup tasks (--all or -a)
+  dotfiles-setup -l                # List available options (--list or -l)
   dotfiles-setup tmux              # Run only the Tmux setup
   dotfiles-setup tmux zsh          # Run Tmux and Zsh setups
 EOF
@@ -63,9 +64,14 @@ EOF
 fi
 
 for option in "$@"; do
-  if [[ "$option" == "--all" ]]; then
+  if [[ "$option" == "--all" || "$option" == "-a" ]]; then
     echo "Running all setup tasks..."
     run_all
+  elif [[ "$option" == "--list" || "$option" == "-l" ]]; then
+    echo "Available options:"
+    for key in "${(@k)CONFIGS}"; do
+      echo "  $key"
+    done
   elif [[ -n "${CONFIGS[$option]}" ]]; then
     echo "Running setup for $option..."
     "${CONFIGS[$option]}"
