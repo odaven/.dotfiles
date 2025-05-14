@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+apk update
+apk upgrade
+apk add -q curl git zsh
+
+sudo chsh -s $(which zsh) $(whoami)
+
+rm -rf "$HOME"/.dotfiles
+git clone --recurse-submodules -b master https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
+
+"$HOME"/.dotfiles/systems/raspberry-pi/bootstrap
