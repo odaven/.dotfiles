@@ -34,7 +34,7 @@ setup_zsh() {
 
   export KEEP_ZSHRC='yes'
   export ZSH="$HOME"/.config/oh-my-zsh
-  curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+  curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh |  zsh
 
   [ -d "$HOME"/.config/zsh ] && rm -rf "$HOME"/.config/zsh
   ln -sfv "$HOME"/.dotfiles/config/zsh "$HOME"/.config
