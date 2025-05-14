@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+
+echo "------- BOOOTSTRAP ---------------"
+
+
 source "$HOME"/.dotfiles/config/zsh/zshrc.d/00-env.zsh
 source "$HOME"/.dotfiles/lib/functions.zsh
 
