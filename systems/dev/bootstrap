@@ -27,7 +27,7 @@ echo $HOME
 # curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 "$HOME"/.dotfiles/bin/dotfiles-link --all
-# "$HOME"/.dotfiles/bin/dotfiles-setup --all
+"$HOME"/.dotfiles/bin/dotfiles-setup --all
 #
 # ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh-local "$HOME"/.config
 #
