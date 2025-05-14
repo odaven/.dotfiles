@@ -35,6 +35,6 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 # rm -f "$HOME"/.bash_history "$HOME"/.bash_logout "$HOME"/.bashrc \
 #       "$HOME"/.profile "$HOME"/.zshrc "$HOME"/.zsh_history
 #
-# chsh -s $(which zsh) $(whoami)
+chsh -s $(which zsh) $(whoami)
 #
 exit 0
