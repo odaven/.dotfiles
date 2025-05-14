@@ -13,10 +13,10 @@ create_xdg_folders
 
 echo "--- Dev Setup ---"
 
-apk update -q && sudo apk upgrade -q
 
-apt add -q \
-    bat cmake curl fd-find git ripgrep tmux vim wget zsh
+#
+# apt add -q \
+#     bat cmake curl fd-find git ripgrep tmux vim wget zsh
 
 
 echo $HOME
@@ -26,7 +26,7 @@ echo $HOME
 # Rust
 # curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-# "$HOME"/.dotfiles/bin/dotfiles-link --all
+"$HOME"/.dotfiles/bin/dotfiles-link --all
 # "$HOME"/.dotfiles/bin/dotfiles-setup --all
 #
 # ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh-local "$HOME"/.config
