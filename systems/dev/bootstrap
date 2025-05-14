@@ -13,21 +13,23 @@ apk update -q && sudo apk upgrade -q
 apt add -q \
     bat cmake curl fd-find git ripgrep tmux vim wget zsh
 
+
+echo $HOME
 # Install starship
 # curl -sS https://starship.rs/install.sh | sh -s -- -y
 
 # Rust
 # curl https://sh.rustup.rs -sSf | sh -s -- -y
 
-"$HOME"/.dotfiles/bin/dotfiles-link --all
-"$HOME"/.dotfiles/bin/dotfiles-setup --all
-
-ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh-local "$HOME"/.config
-
-# Delete unnecessary files
-rm -f "$HOME"/.bash_history "$HOME"/.bash_logout "$HOME"/.bashrc \
-      "$HOME"/.profile "$HOME"/.zshrc "$HOME"/.zsh_history
-
-chsh -s $(which zsh) $(whoami)
-
+# "$HOME"/.dotfiles/bin/dotfiles-link --all
+# "$HOME"/.dotfiles/bin/dotfiles-setup --all
+#
+# ln -sfv "$HOME"/.dotfiles/systems/raspberry-pi/zsh-local "$HOME"/.config
+#
+# # Delete unnecessary files
+# rm -f "$HOME"/.bash_history "$HOME"/.bash_logout "$HOME"/.bashrc \
+#       "$HOME"/.profile "$HOME"/.zshrc "$HOME"/.zsh_history
+#
+# chsh -s $(which zsh) $(whoami)
+#
 exit 0
