@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+echo
+echo "--- Bootstrap ---"
+
+export DOTFILES_LINUX_MINT="$HOME/.dotfiles"
+
+# "$HOME"/.dotfiles/systems/lm/packages
+# "$HOME"/.dotfiles/systems/lm/setup-config
+"$HOME"/.dotfiles/systems/lm/link-local
+
+

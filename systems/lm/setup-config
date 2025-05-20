@@ -1,0 +1,21 @@
+#!/usr/bin/env zsh
+
+echo
+echo "--- Setup configurations---"
+
+source "$HOME"/.dotfiles/lib/functions.zsh
+
+
+run_setup_list \
+bat \
+nvim \
+--dry
+# Install package cannot do setup because the name of the config is different.
+# Package: neovim
+# config: nvim
+
+# run_setup_list \
+# bat \
+# nvim
+
+

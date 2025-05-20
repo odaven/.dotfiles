@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+source "$HOME"/.dotfiles/lib/functions.zsh
+
+# check_package_manager
+
+"$HOME"/.dotfiles/setup/bat
+
+if [[ "$(uname)" == "Darwin" ]]; then
+  brew install bat
+  return 0
+fi
+
+sudo apt install -y bat
+

@@ -1,0 +1,34 @@
+#!/usr/bin/env zsh
+
+source "$HOME"/.dotfiles/lib/functions.zsh
+
+if [[ -n "$DOTFILES_LINUX_MINT" ]]; then
+  echo "DOTFILES_LINUX_MINT is set to $DOTFILES_LINUX_MINT"
+else
+  echo "DOTFILES_LINUX_MINT is not set"
+fi
+
+echo
+echo "--- Installing packages ---"
+
+sudo apt update -y
+sudo apt upgrade -y
+
+# sudo apt install -y \
+# bat \
+# neovim
+
+echo
+echo "--- Installing packages ---"
+install_packages \
+bat \
+# --dry
+# Install package cannot do setup because the name of the config is different.
+# Package: neovim
+# config: nvim
+
+echo ""
+# echo "--- Post actions  ---"
+# sudo apt autoremove
+# sudo apt autopurge
+# sudo apt autoclean

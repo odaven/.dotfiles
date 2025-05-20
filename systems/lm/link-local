@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+echo
+echo "--- Linking local config ---"
+
+ln -sfv "$HOME"/.dotfiles/systems/shared/config/git "$HOME"/.config/git-local
+ln -sfv "$HOME"/.dotfiles/systems/lm/config/zsh "$HOME"/.config/zsh-local
