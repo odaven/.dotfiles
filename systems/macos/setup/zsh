@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-
-[ -d "$HOME"/.config/zsh-local ] && rm -rf "$HOME"/.config/zsh-local
-ln -sfv "$HOME"/.dotfiles/systems/macos/config/zsh "$HOME"/.config/zsh-local

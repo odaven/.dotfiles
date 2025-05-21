@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
 
+# Ask sudo first
+sudo -v
+
 rm -rf "$HOME"/.dotfiles
 git clone --recurse-submodules -b master https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
 
-"$HOME"/.dotfiles/systems/macos/install
+"$HOME"/.dotfiles/systems/macos/bootstrap

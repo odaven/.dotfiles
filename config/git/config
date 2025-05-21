@@ -22,6 +22,10 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 
+[user]
+  name = odaven
+  email = 18171281+odaven@users.noreply.github.com
+
 # Local configuration for the machine last to override the one above
 [include]
   path = ~/.config/git-local/config

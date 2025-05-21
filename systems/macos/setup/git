@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-
-[ -d "$HOME"/.config/git-local ] && rm -rf "$HOME"/.config/git-local
-ln -sfv "$HOME"/.dotfiles/systems/macos/config/git "$HOME"/.config/git-local

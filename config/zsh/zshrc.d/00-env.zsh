@@ -8,7 +8,7 @@ export XDG_DATA_HOME="$HOME"/.local/share
 export XDG_STATE_HOME="$HOME"/.local/state
 
 # Dotfiles
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME"/.dotfiles
 
 # Editor
 export EDITOR="nvim"
@@ -39,18 +39,21 @@ export FZF_CTRL_R_OPTS="
 
 # Go
 export GOPATH="$XDG_DATA_HOME"/go
-export GOBIN="$GOPATH/bin"
+export GOBIN="$GOPATH"/bin
 export GOCACHE="$XDG_CACHE_HOME"/go-build
 export GOMODCACHE="$XDG_CACHE_HOME"/go/mod
+
+# Neovim as manpager
+export MANPAGER='nvim +Man!'
 
 # Node
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
 
 # Npm
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 
 # Ripgrep
-export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
+export RIPGREP_CONFIG_PATH="$XDG_CONFIG_HOME"/ripgrep/config
 
 # Rust
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
@@ -65,6 +68,5 @@ export ZSH="$XDG_CONFIG_HOME"/oh-my-zsh
 export ZSH_COMPDUMP="$XDG_CACHE_HOME"/zsh/zcompdump-"$ZSH_VERSION"
 export ZSH_CUSTOM="$ZDOTDIR"/oh-my-zsh/custom
 export SHELL_SESSIONS_DISABLE=1
-[ ! -d "$XDG_STATE_HOME"/zsh ] && mkdir -p "$XDG_STATE_HOME"/zsh
-[ ! -d "$XDG_CACHE_HOME"/zsh ] && mkdir -p "$XDG_CACHE_HOME"/zsh
+
 
