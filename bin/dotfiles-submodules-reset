@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+git -C "$HOME"/.dotfiles submodule foreach --recursive '
+  echo "Update of $name..."
+  git fetch origin && git reset --hard origin/master || echo "Failed to force update $name, skipping."
+'
+

@@ -2,3 +2,8 @@
   path = config/nvim
   url = https://github.com/odaven/nvim.git
   branch = master
+
+[submodule "config/private"]
+  path = config/private
+  url = git@github.com:odaven/.dotfiles-private.git
+  branch = master
