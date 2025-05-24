@@ -57,6 +57,9 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 # SQLite
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 
+# Zoxide
+export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide"
+
 # zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"

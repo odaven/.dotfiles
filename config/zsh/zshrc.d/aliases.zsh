@@ -1,5 +1,9 @@
 #!/usr/bin/env zsh
 
+if command -v zoxide >/dev/null 2>&1; then
+  alias cd='z'
+fi
+
 alias ls='ls -Fh --color=auto'
 alias l='ls'
 alias ll='ls -l'

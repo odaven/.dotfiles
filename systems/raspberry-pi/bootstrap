@@ -25,6 +25,8 @@ sudo curl -sS https://starship.rs/install.sh | sh -s -- -y
 # Rust
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 
+curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+
 "$HOME/.dotfiles/bin/dotfiles-setup" --all
 
 link_config "$HOME/.dotfiles/systems/raspberry-pi/zsh-local" "$HOME/.config/zsh-local"
