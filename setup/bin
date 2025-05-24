@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
 
-[ ! -d "$HOME"/.local ] && mkdir "$HOME"/.local
-ln -sfv "$HOME"/.dotfiles/bin "$HOME"/.local
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+link_config "$HOME/.dotfiles/bin" "$HOME/.local/bin"

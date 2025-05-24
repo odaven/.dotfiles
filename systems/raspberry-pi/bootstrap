@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+# Ask sudo first
+sudo -v
+
+source "$HOME/.dotfiles/config/zsh/zshrc.d/00-env.zsh"
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+# Creating folders
+create_xdg_folders
+
+echo "--- Raspberry Pi Setup ---"
+
+sudo apt update -yq && sudo apt upgrade -yq
+
+sudo apt install -yqm \
+    bat cmake curl fd-find git ripgrep tmux vim wget zsh
+
+sudo apt autoremove -yq
+sudo apt clean -yq
+
+# Install starship
+sudo curl -sS https://starship.rs/install.sh | sh -s -- -y
+
+# Rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+
+"$HOME/.dotfiles/bin/dotfiles-setup" --all
+
+link_config "$HOME/.dotfiles/systems/raspberry-pi/zsh-local" "$HOME/.config/zsh-local"
+
+# Delete unnecessary files
+rm -f "$HOME/.bash_history" "$HOME/.bash_logout" "$HOME/.bashrc" \
+      "$HOME/.profile" "$HOME/.zshrc" "$HOME/.zsh_history"
+
+sudo chsh -s "$(which zsh)" "$(whoami)"
+
+exit 0

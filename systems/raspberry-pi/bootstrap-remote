@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+set -e
+
+# Ask for sudo upfront
+sudo -v
+
+sudo apt update -yq
+sudo apt upgrade -yq
+sudo apt install -yqm curl git zsh
+
+sudo chsh -s "$(which zsh)" "$(whoami)"
+
+rm -rf "$HOME/.dotfiles"
+git clone --recurse-submodules --depth 1 -b master https://github.com/odaven/.dotfiles.git "$HOME/.dotfiles"
+
+"$HOME/.dotfiles/systems/raspberry-pi/bootstrap"

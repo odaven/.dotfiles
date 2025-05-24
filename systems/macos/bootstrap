@@ -1,0 +1,23 @@
+#!/usr/bin/env zsh
+
+# Ask sudo first
+sudo -v
+
+source "$HOME/.dotfiles/config/zsh/zshrc.d/00-env.zsh"
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+echo "--- MacOS Setup ---"
+
+create_xdg_folders
+
+# Install homebrew
+NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+brew bundle install --cleanup --file "$HOME/.dotfiles/systems/macos/Brewfile"
+
+"$HOME/.dotfiles/systems/macos/os-settings"
+
+"$HOME/.dotfiles/bin/dotfiles-setup" --all
+
+link_config "$HOME/.dotfiles/systems/macos/zsh-local" "$HOME/.config/zsh-local"
+

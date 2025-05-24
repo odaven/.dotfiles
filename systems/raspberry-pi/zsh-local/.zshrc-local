@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
-if [[ -z $TMUX ]]; then
-    tmux new-session -A -s raspberry-pi
+# Start tmux session if not already inside tmux
+if [[ -z "${TMUX:-}" ]]; then
+  tmux new-session -A -s raspberry-pi
 fi
 
+# Aliases for Raspberry Pi package names
 alias bat='batcat'
 alias fd='fdfind'
 

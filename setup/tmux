@@ -1,7 +1,10 @@
 #!/usr/bin/env zsh
 
-# Just in case already exist
-rm -rf "$HOME"/.dotfiles/config/tmux/plugins
-git clone https://github.com/tmux-plugins/tpm "$HOME"/.dotfiles/config/tmux/plugins/tpm
+source "$HOME/.dotfiles/lib/functions.zsh"
 
-ln -sfv "$HOME"/.dotfiles/config/tmux "$HOME"/.config
+rm -rf "$HOME/.dotfiles/config/tmux/plugins"
+git clone https://github.com/tmux-plugins/tpm "$HOME/.dotfiles/config/tmux/plugins/tpm"
+
+link_config "$HOME/.dotfiles/config/tmux" "$HOME/.config/tmux"
+
+"$HOME/.config/tmux/plugins/tpm/bin/install_plugins"

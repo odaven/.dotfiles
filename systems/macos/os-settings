@@ -1,9 +1,5 @@
 #!/usr/bin/env zsh
 
-# Ask sudo first
-echo "Sudo for installing os settings"
-sudo -v
-
 ###################################################
 # System preferences -> Appearance
 ###################################################

@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+source "$HOME/.dotfiles/config/zsh/zshrc.d/00-env.zsh"
+
 # Colours for prompts
 # Black        0;30     Dark Gray     1;30
 # Red          0;31     Light Red     1;31
@@ -13,34 +15,19 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-function echo_red() {
+echo_red() {
   echo "${RED}$1${NC}"
 }
 
-function run_setup_list() {
-  array=("$@")
-  for i in "${array[@]}"
-  do
-    setup="$HOME"/.dotfiles/setup/"$i"
-    if [ -f "$setup" ]; then
-       $setup
-    else
-     echo_red "Didn't setup $setup"
-    fi
-  done
+# Create all XDG base directories if they don't exist
+create_xdg_folders() {
+  mkdir -p $XDG_BIN_HOME $XDG_CACHE_HOME $XDG_CONFIG_HOME $XDG_DATA_HOME $XDG_STATE_HOME
 }
 
-function run_setup_all() {
-  for entry in "$HOME"/.dotfiles/setup/*
-  do
-    $entry
-  done
-}
-
-function create_xdg_folders () {
-  [ ! -d "$HOME"/.cache ] && mkdir "$HOME"/.cache
-  [ ! -d "$HOME"/.config ] && mkdir "$HOME"/.config
-  [ ! -d "$HOME"/.local ] && mkdir "$HOME"/.local
-  [ ! -d "$HOME"/.local/share ] && mkdir "$HOME"/.local/share
-  [ ! -d "$HOME"/.local/state ] && mkdir "$HOME"/.local/state
+# Remove destination if it exists, then create symlink
+link_config() {
+  local src=$1
+  local dest=$2
+  [[ -e $dest || -L $dest ]] && rm -rf $dest
+  ln -sv $src $dest
 }

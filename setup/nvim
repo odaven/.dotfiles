@@ -1,9 +1,11 @@
 #!/usr/bin/env zsh
 
-rm -rf "$HOME"/.local/share/nvim
-rm -rf "$HOME"/.local/state/nvim
-rm -rf "$HOME"/.cache/nvim
-rm -rf "$HOME"/.config/nvim
+source "$HOME/.dotfiles/lib/functions.zsh"
 
-ln -sfv "$HOME"/.dotfiles/config/nvim "$HOME"/.config
+rm -rf "$HOME/.local/share/nvim"
+rm -rf "$HOME/.local/state/nvim"
+rm -rf "$HOME/.cache/nvim"
+rm -rf "$HOME/.config/nvim"
+
+link_config "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
 

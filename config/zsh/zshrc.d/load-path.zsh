@@ -17,6 +17,9 @@ export PATH="$GOBIN:$PATH"
 
 # Rust
 export PATH="$CARGO_HOME/bin:$PATH"
+if command -v brew &> /dev/null; then
+    export PATH="$(brew --prefix rustup)/bin:$PATH"
+fi
 
 # SQLite
 export PATH="/usr/local/opt/sqlite/bin:$PATH"

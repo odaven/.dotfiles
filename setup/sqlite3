@@ -1,3 +1,5 @@
 #!/usr/bin/env zsh
 
-ln -sfv "$HOME"/.dotfiles/config/sqlite3 "$HOME"/.config
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+link_config "$HOME/.dotfiles/config/sqlite3" "$HOME/.config/sqlite3"

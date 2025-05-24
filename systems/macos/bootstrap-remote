@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+# Ask for sudo upfront
+sudo -v
+
+rm -rf "$HOME/.dotfiles"
+git clone --recurse-submodules --depth 1 -b master https://github.com/odaven/.dotfiles.git "$HOME/.dotfiles"
+
+"$HOME/.dotfiles/systems/macos/bootstrap"

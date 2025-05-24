@@ -1,9 +1,19 @@
 #!/usr/bin/env zsh
 
-if [[ "$1" == "dev" ]]; then
-  ln -sfv "$HOME"/Dev/nvim "$HOME"/.config
-elif [[ "$1" == "dot" ]]; then
-  ln -sfv "$HOME"/.dotfiles/config/nvim "$HOME"/.config
-else
-  echo "Invalid paramter. Valid options are: dev, dot"
-fi
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+case "$1" in
+  clean)
+    rm -rf "$HOME/.local/share/nvim" "$HOME/.local/state/nvim" "$HOME/.cache/nvim" "$HOME/.config/nvim"
+    ;;
+  dev)
+    link_config "$HOME/Dev/nvim" "$HOME/.config/nvim"
+    ;;
+  dot)
+    link_config "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
+    git -C "$HOME/.dotfiles" submodule update --remote --force
+    ;;
+  *)
+    echo "Invalid parameter. Valid options are: clean, dev, dot"
+    ;;
+esac

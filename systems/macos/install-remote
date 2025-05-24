@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-
-rm -rf "$HOME"/.dotfiles
-git clone --recurse-submodules -b master https://github.com/odaven/.dotfiles.git "$HOME"/.dotfiles/
-
-"$HOME"/.dotfiles/systems/macos/install
