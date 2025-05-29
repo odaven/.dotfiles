@@ -26,6 +26,9 @@
   name = odaven
   email = 18171281+odaven@users.noreply.github.com
 
+[include]
+  path = ~/.config/delta/delta.config
+
 # Local configuration for the machine last to override the one above
 [include]
   path = ~/.config/git-local/config
