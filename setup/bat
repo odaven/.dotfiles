@@ -3,3 +3,6 @@
 source "$HOME/.dotfiles/lib/functions.zsh"
 
 link_config "$HOME/.dotfiles/config/bat" "$HOME/.config/bat"
+
+bat cache --build
+
