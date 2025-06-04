@@ -1,0 +1,13 @@
+[delta]
+  minus-style                   = "#914c54"
+  minus-non-emph-style          = "#914c54"
+  minus-emph-style              = "#000000" "#914c54"
+  minus-empty-line-marker-style = "#713137"
+  line-numbers-minus-style      = "#914c54"
+  plus-style                    = "#449dab"
+  plus-non-emph-style           = "#449dab"
+  plus-emph-style               = "#000000" "#449dab"
+  plus-empty-line-marker-style  = "#20303b"
+  line-numbers-plus-style       = "#449dab"
+  line-numbers-zero-style       = "#3b4261"
+  syntax-theme = tokyonight-night # bat theme
