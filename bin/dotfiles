@@ -35,7 +35,7 @@ fi
 
 method="$1"
 shift
-if ! [[ " ${ACCEPTED_METHODS[*]} " == *" $method "* ]]; then
+if (( ! ${ACCEPTED_METHODS[(Ie)$method]} )); then
   echo "Error: Method '$method' is not accepted."
   echo "Accepted methods: ${ACCEPTED_METHODS[*]}"
   exit 1
@@ -50,7 +50,7 @@ fi
 if [[ ( "$1" == "--all" || "$1" == "-a" ) && "$#" -eq 1 ]]; then
   for setup_file in "$SETUP_DIR"/*; do
     [[ -f "$setup_file" ]] || continue
-    "$setup_file" "$method"
+    "$setup_file" "$method" || echo "✖ $method failed for $(basename "$setup_file")"
   done
   exit 0
 fi
@@ -58,10 +58,9 @@ fi
 for name in "$@"; do
   setup_file="$SETUP_DIR/$name"
   if [[ -f "$setup_file" ]]; then
-    "$setup_file" "$method"
+    "$setup_file" "$method" || echo "✖ $method failed for $name"
   else
     echo "No setup file found for $name ($setup_file)"
     exit 1
   fi
 done
-
