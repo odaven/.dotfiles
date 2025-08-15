@@ -2,7 +2,20 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/bat" "$HOME/.config/bat"
+install() {
+  # TODO: implement install logic for bat
+  echo "Installing bat..."
+}
 
-bat cache --build
+config() {
+  safe_link "$HOME/.dotfiles/config/bat" "$HOME/.config/bat"
+  # TODO: implement config logic for bat
+}
+
+envs() {
+  # Export environment variables for bat
+  # export BAT_CONFIG_PATH="$HOME/.config/bat/config"
+}
+
+"$@"
 

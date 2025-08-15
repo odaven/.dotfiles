@@ -7,5 +7,18 @@ rm -rf "$HOME/.local/state/nvim"
 rm -rf "$HOME/.cache/nvim"
 rm -rf "$HOME/.config/nvim"
 
-link_config "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
+install() {
+  # TODO: implement install logic for nvim
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
+  # TODO: implement config logic for nvim
+}
+
+envs() {
+  # Export environment variables for nvim
+}
+
+"$@"
 

@@ -1,0 +1,67 @@
+#!/usr/bin/env zsh
+
+SETUP_DIR="$HOME/.dotfiles/setup"
+ACCEPTED_METHODS=(config envs help install list)
+
+if [[ $# -eq 0 || "$1" == "help" ]]; then
+  cat <<EOF
+Usage: dotfiles <method> <name> [name ...]
+
+Accepted methods:
+  config       # Link or configure one or more setups
+  envs         # Export environment variables for one or more setups
+  help         # Show this help message
+  install      # Run install logic for one or more setups
+  list         # List available setup scripts
+
+Examples:
+  dotfiles list                  # List available setup scripts
+  dotfiles install bat           # Run install for bat
+  dotfiles config nvim zsh       # Run config for nvim and zsh
+  dotfiles envs tmux             # Export envs for tmux
+  dotfiles install --all         # Run install for all setups
+  dotfiles config -a             # Run config for all setups
+  dotfiles help                  # Show this help message
+EOF
+  exit 1
+fi
+
+if [[ "$1" == "list" ]]; then
+  for file in "$SETUP_DIR"/*; do
+    [[ -f "$file" ]] && echo "  $(basename "$file")"
+  done
+  exit 0
+fi
+
+method="$1"
+shift
+if ! [[ " ${ACCEPTED_METHODS[*]} " == *" $method "* ]]; then
+  echo "Error: Method '$method' is not accepted."
+  echo "Accepted methods: ${ACCEPTED_METHODS[*]}"
+  exit 1
+fi
+
+if [[ $# -eq 0 ]]; then
+  echo "Error: No setup name(s) provided for method '$method'."
+  echo "Usage: dotfiles <method> <name> [name ...]"
+  exit 1
+fi
+
+if [[ ( "$1" == "--all" || "$1" == "-a" ) && "$#" -eq 1 ]]; then
+  for setup_file in "$SETUP_DIR"/*; do
+    [[ -f "$setup_file" ]] || continue
+    "$setup_file" "$method"
+  done
+  exit 0
+fi
+
+for name in "$@"; do
+  setup_file="$SETUP_DIR/$name"
+  if [[ -f "$setup_file" ]]; then
+    "$setup_file" "$method"
+  else
+    echo "No setup file found for $name ($setup_file)"
+    exit 1
+  fi
+done
+

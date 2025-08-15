@@ -2,4 +2,17 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/npm" "$HOME/.config/npm"
+install() {
+  # TODO: implement install logic for npm
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/npm" "$HOME/.config/npm"
+  # TODO: implement config logic for npm
+}
+
+envs() {
+  # Export environment variables for npm
+}
+
+"$@"

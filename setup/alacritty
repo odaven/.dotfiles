@@ -2,4 +2,18 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/alacritty" "$HOME/.config/alacritty"
+install() {
+  # TODO: implement install logic for alacritty
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/alacritty" "$HOME/.config/alacritty"
+  # TODO: implement config logic for alacritty
+}
+
+envs() {
+  # Export environment variables for alacritty
+  # export ALACRITTY_VAR=value
+}
+
+"$@"

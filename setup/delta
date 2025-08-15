@@ -2,4 +2,17 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/delta" "$HOME/.config/delta"
+install() {
+  # TODO: implement install logic for delta
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/delta" "$HOME/.config/delta"
+  # TODO: implement config logic for delta
+}
+
+envs() {
+  # Export environment variables for delta
+}
+
+"$@"

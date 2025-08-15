@@ -2,4 +2,17 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/lazygit" "$HOME/.config/lazygit"
+install() {
+  # TODO: implement install logic for lazygit
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/lazygit" "$HOME/.config/lazygit"
+  # TODO: implement config logic for lazygit
+}
+
+envs() {
+  # Export environment variables for lazygit
+}
+
+"$@"

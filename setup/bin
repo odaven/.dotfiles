@@ -2,4 +2,18 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/bin" "$HOME/.local/bin"
+install() {
+  # TODO: implement install logic for bin
+    echo "Installing bin scripts..."
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/bin" "$HOME/.config/bin"
+  # TODO: implement config logic for bin
+}
+
+envs() {
+  # Export environment variables for bin
+}
+
+"$@"

@@ -2,4 +2,17 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/ripgrep" "$HOME/.config/ripgrep"
+install() {
+  # TODO: implement install logic for ripgrep
+}
+
+config() {
+  safe_link "$HOME/.dotfiles/config/ripgrep" "$HOME/.config/ripgrep"
+  # TODO: implement config logic for ripgrep
+}
+
+envs() {
+  # Export environment variables for ripgrep
+}
+
+"$@"

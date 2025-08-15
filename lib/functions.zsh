@@ -25,7 +25,7 @@ create_xdg_folders() {
 }
 
 # Remove destination if it exists, then create symlink
-link_config() {
+safe_link() {
   local src=$1
   local dest=$2
   [[ -e $dest || -L $dest ]] && rm -rf $dest
