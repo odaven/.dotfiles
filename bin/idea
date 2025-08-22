@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-
-open -na "IntelliJ IDEA.app" --args "$@"
