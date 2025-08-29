@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-
-rustup component add rust-analyzer
-rustup update
-
