@@ -21,7 +21,7 @@ brew "lazydocker"
 brew "lazygit"
 brew "mysql"
 brew "neovim"
-brew "node"
+brew "node@22", link: true
 brew "python@3.11"
 brew "ripgrep"
 brew "rustup"
