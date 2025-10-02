@@ -15,6 +15,9 @@ fi
 # Go
 export PATH="$GOBIN:$PATH"
 
+# Npm
+export PATH="$(npm config get prefix)/bin:$PATH"
+
 # Rust
 export PATH="$CARGO_HOME/bin:$PATH"
 if command -v brew &> /dev/null; then
