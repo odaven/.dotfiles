@@ -18,6 +18,12 @@ alias lla='ls -Al'
 alias n='nvim'
 idea() { open -na "IntelliJ IDEA.app" --args "$@"; }
 
+# Notes
+alias notes='n ~/Dev/notes/'
+
+# Tmux
+alias tb='tmux new-session -A -s bedrock'
+
 # Tools
 alias d='docker'
 alias g='git'
