@@ -1,71 +1,11 @@
 #!/usr/bin/env zsh
 
-###################################################
-# System preferences -> Appearance
-###################################################
-# Accent colour
-defaults write -g AppleAccentColor -string 1
-# Highlight colour
-defaults write -g AppleHighlightColor -string "1.000000 0.874510 0.701961 Orange"
-
-###################################################
-# Sounds
-###################################################
-# Remove beep on error
-defaults write NSGlobalDomain com.apple.sound.beep.volume -float 0
-# Disable the sound effects on boot
-sudo nvram StartupMute=%01
-
-###################################################
-# Dock
-###################################################
-defaults write com.apple.dock "orientation" -string "bottom"
-defaults write com.apple.dock "tilesize" -int "38"
-defaults write com.apple.dock "autohide" -bool "false"
-
-###################################################
-# Finder
-###################################################
-# Show all filename extensions
-defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
-# Show hidden files
-defaults write com.apple.finder "AppleShowAllFiles" -bool "false"
-# Path bar
-defaults write com.apple.finder "ShowPathbar" -bool "true"
-# Status bar
-defaults write com.apple.finder "ShowStatusBar" -bool "true"
-# Keep folders on top
-defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"
-# Display a warning when changing a file extension in the Finder
-defaults write com.apple.finder "FXEnableExtensionChangeWarning" -bool "true"
-
-###################################################
-# Mission Control
-###################################################
-defaults write com.apple.dock "mru-spaces" -bool "false"
-defaults write com.apple.dock "expose-group-apps" -bool "true"
-defaults write com.apple.spaces "spans-displays" -bool "true"
-
-###################################################
-# Keyboard
-###################################################
 # Disable press and hold
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
+
 # Fast keyrepeat and short delay until key repeat
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write -g KeyRepeat -int 2
+defaults write -g InitialKeyRepeat -int 15
+
 # F row acting as F keys
-defaults write NSGlobalDomain com.apple.keyboard.fnState -bool "true"
-
-###################################################
-# Safari
-###################################################
-# Show developer menu
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-
-###################################################
-# Restart stuff
-###################################################
-killall Dock
-killall SystemUIServer
-killall Finder
+defaults write -g com.apple.keyboard.fnState -bool "true"
