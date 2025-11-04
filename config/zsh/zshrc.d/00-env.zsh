@@ -70,6 +70,9 @@ export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 # SQLite
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
 
+# Starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
 # Zoxide
 export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide"
 

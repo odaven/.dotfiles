@@ -2,4 +2,4 @@
 
 source "$HOME/.dotfiles/lib/functions.zsh"
 
-link_config "$HOME/.dotfiles/config/starship/starship.toml" "$HOME/.config/starship.toml"
+link_config "$HOME/.dotfiles/config/starship" "$HOME/.config/starship"
