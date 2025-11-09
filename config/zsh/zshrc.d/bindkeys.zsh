@@ -4,4 +4,4 @@
 # Functionality can be trigger with ESC-C too.
 bindkey "ç" fzf-cd-widget
 
-bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^p "tmux-sessionizer\n"
