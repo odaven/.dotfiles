@@ -1,15 +1,15 @@
 #!/usr/bin/env zsh
 
+set -euo pipefail
+
 # Ask sudo first
 sudo -v
 
-source "$HOME/.dotfiles/config/zsh/zshrc.d/00-env.zsh"
-source "$HOME/.dotfiles/lib/functions.zsh"
-
-# Creating folders
-create_xdg_folders
+export PATH="$HOME/.dotfiles/bin:$PATH"
 
 echo "--- Raspberry Pi Setup ---"
+
+dotfiles-xdg-mkdirs
 
 sudo apt update -yq && sudo apt upgrade -yq
 
@@ -27,14 +27,16 @@ curl https://sh.rustup.rs -sSf | sh -s -- -y
 
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
-"$HOME/.dotfiles/bin/dotfiles-setup" --all
+dot-config --all
 
-link_config "$HOME/.dotfiles/systems/raspberry-pi/zsh-local" "$HOME/.config/zsh-local"
+dot-link "systems/raspberry-pi/zsh-local" "$HOME/.config/zsh-local"
 
 # Delete unnecessary files
 rm -f "$HOME/.bash_history" "$HOME/.bash_logout" "$HOME/.bashrc" \
       "$HOME/.profile" "$HOME/.zshrc" "$HOME/.zsh_history"
 
 sudo chsh -s "$(which zsh)" "$(whoami)"
+
+dot-post-install --all
 
 exit 0

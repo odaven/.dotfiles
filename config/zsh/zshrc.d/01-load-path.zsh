@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Loading the PATH
 # This file should be sourced before the .zsh-local
 # so we can be sure any PATH added locally has priority over the general one below

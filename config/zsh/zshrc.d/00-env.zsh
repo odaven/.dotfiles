@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # XDG
 export XDG_BIN_HOME="$HOME/.local/bin"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -82,5 +80,3 @@ export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 export ZSH_CUSTOM="$ZDOTDIR/oh-my-zsh/custom"
 export SHELL_SESSIONS_DISABLE=1
-
-

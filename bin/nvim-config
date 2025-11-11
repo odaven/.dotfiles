@@ -1,18 +1,24 @@
 #!/usr/bin/env zsh
 
-source "$HOME/.dotfiles/lib/functions.zsh"
+set -euo pipefail
 
 case "$1" in
   clean)
     rm -rf "$HOME/.local/share/nvim" "$HOME/.local/state/nvim" "$HOME/.cache/nvim" "$HOME/.config/nvim"
     ;;
+
   dev)
-    link_config "$HOME/Dev/nvim" "$HOME/.config/nvim"
+    local src="$HOME/Dev/nvim"
+    local dest="$HOME/.config/nvim"
+    [[ -e $dest || -L $dest ]] && rm -rf $dest
+    ln -sv $src $dest
     ;;
+
   dot)
-    link_config "$HOME/.dotfiles/config/nvim" "$HOME/.config/nvim"
-    git -C "$HOME/.dotfiles" submodule update --remote --force
+    dot-config nvim 
+    git -C "$HOME/.dotfiles" submodule update --init --recursive --remote --force
     ;;
+
   *)
     echo "Invalid parameter. Valid options are: clean, dev, dot"
     ;;

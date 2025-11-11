@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+set -euo pipefail
+
 # Ask for sudo upfront
 sudo -v
 

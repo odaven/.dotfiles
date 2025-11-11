@@ -1,23 +1,30 @@
 #!/usr/bin/env zsh
 
+set -euo pipefail
+
 # Ask sudo first
 sudo -v
 
+export PATH="$HOME/.dotfiles/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
 source "$HOME/.dotfiles/config/zsh/zshrc.d/00-env.zsh"
-source "$HOME/.dotfiles/lib/functions.zsh"
+source "$HOME/.dotfiles/config/zsh/zshrc.d/01-load-path.zsh"
+
 
 echo "--- MacOS Setup ---"
 
-create_xdg_folders
+dot-xdg-mkdirs
 
-# Install homebrew
-NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+dot-install-homebrew
 
 brew bundle install --cleanup --file "$HOME/.dotfiles/systems/macos/Brewfile"
 
 "$HOME/.dotfiles/systems/macos/os-settings"
 
-"$HOME/.dotfiles/bin/dotfiles-setup" --all
+dot-config --all
 
-link_config "$HOME/.dotfiles/systems/macos/zsh-local" "$HOME/.config/zsh-local"
+dot-link "systems/macos/zsh" "$HOME/.config/zsh-local"
 
+dot-post-install --all
+
+nvim-config dot

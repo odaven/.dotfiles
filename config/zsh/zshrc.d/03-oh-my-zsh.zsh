@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Oh my zsh plugins
 plugins=(git)
 ZSH_THEME=""

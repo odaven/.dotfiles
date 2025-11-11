@@ -1,0 +1,55 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+POST_INSTALL_DIR="$HOME/.dotfiles/post-install"
+
+if [[ $# -eq 0 ]]; then
+  cat <<EOF
+Usage: dot-post-install <option>
+
+Options:
+  -a, --all     Run all post-install files
+  -l, --list    List available options
+
+Examples:
+  dot-post-install -a
+  dot-post-install -l
+  dot-post-install tmux
+  dot-post-install tmux zsh
+EOF
+  exit 1
+fi
+
+case "$1" in
+  --list|-l)
+    echo "Available options in $POST_INSTALL_DIR:"
+    for file in "$POST_INSTALL_DIR"/*; do
+      [[ -f "$file" ]] && echo "  $(basename "$file")"
+    done
+    exit 0
+    ;;
+
+  --all|-a)
+    echo "Running all post-install files from $POST_INSTALL_DIR..."
+    for file in "$POST_INSTALL_DIR"/*; do
+      [[ -f "$file" ]] || continue
+      echo "Running post-install for $(basename "$file")..."
+      "$file"
+    done
+    exit 0
+    ;;
+esac
+
+for file in "$@"; do
+  if [[ ! -f "$POST_INSTALL_DIR/$file" ]]; then
+    echo_red "Error: '$POST_INSTALL_DIR/$file' does not exist." >&2
+    continue
+  fi
+
+  echo "Running post-install for $file..."
+  "$POST_INSTALL_DIR/$file"
+done
+

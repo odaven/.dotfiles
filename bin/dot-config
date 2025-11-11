@@ -1,0 +1,57 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+CONFIG_DIR="$HOME/.dotfiles/config"
+TARGET_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+usage() {
+  cat <<EOF
+Usage: dot-config <option|name...>
+
+Options:
+  -a, --all     Link all configs
+  -l, --list    List available configs
+
+Examples:
+  dot-config -a
+  dot-config -l
+  dot-config nvim
+  dot-config nvim tmux
+EOF
+}
+
+if [[ $# -eq 0 ]]; then
+  usage
+  exit 1
+fi
+
+case "$1" in
+  --list|-l)
+    echo "Available configs in $CONFIG_DIR:"
+    for folder in "$CONFIG_DIR"/*; do
+      [[ -d "$folder" ]] && echo "  $(basename "$folder")"
+    done
+    exit 0
+    ;;
+
+  --all|-a)
+    echo "Linking all configs from $CONFIG_DIR..."
+    for folder in "$CONFIG_DIR"/*; do
+      [[ -d "$folder" ]] || continue
+      dot-link "config/$(basename "$folder")" "$TARGET_DIR/$(basename "$folder")"
+    done
+    exit 0
+    ;;
+esac
+
+for folder in "$@"; do
+  if [[ ! -d "$CONFIG_DIR/$folder" ]]; then
+    echo_red "Error: '$CONFIG_DIR/$folder' does not exist." >&2
+    continue
+  fi
+
+  dot-link "config/$folder" "$TARGET_DIR/$folder"
+done

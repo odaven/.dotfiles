@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Navigation
 if command -v zoxide >/dev/null 2>&1; then
   alias cd='z'

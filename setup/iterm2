@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-
-source "$HOME/.dotfiles/lib/functions.zsh"
-
-link_config "$HOME/.dotfiles/config/iterm2" "$HOME/.config/iterm2"

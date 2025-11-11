@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+dirs=(
+  "$HOME/.cache"
+  "$HOME/.config"
+  "$HOME/.local/bin"
+  "$HOME/.local/opt"
+  "$HOME/.local/share"
+  "$HOME/.local/state"
+  "$HOME/.local/state/zsh"
+)
+
+mkdir -p "${dirs[@]}"

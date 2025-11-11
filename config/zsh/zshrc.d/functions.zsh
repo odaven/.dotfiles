@@ -1,5 +1,3 @@
-#!/usr/bin/env zsh
-
 # Backup a file or directory
 bak() {
   local target

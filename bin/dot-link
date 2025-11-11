@@ -1,0 +1,30 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+link_dot() {
+  local src="$HOME/.dotfiles/$1"
+  local dest="$2"
+
+  if [[ ! -e "$src" ]]; then
+    echo_red "Error: '$src' does not exist." >&2
+    exit 1
+  fi
+
+  # Ensure destination parent exists
+  local parent
+  parent="$(dirname "$dest")"
+  mkdir -p "$parent"
+
+  [[ -e "$dest" || -L "$dest" ]] && rm -rf -- "$dest"
+  ln -sv "$src" "$dest"
+}
+
+if [[ $# -ne 2 ]]; then
+  echo "Usage: dot-link <source> <destination>" >&2
+  exit 1
+fi
+
+link_dot "$1" "$2"
