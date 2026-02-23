@@ -11,6 +11,10 @@ export DOTFILES="$HOME/.dotfiles"
 # Editor
 export EDITOR="nvim"
 
+# AWS
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+
 # Fzf
 export FZF_DEFAULT_COMMAND="fd"
 export FZF_DEFAULT_OPTS=$'
@@ -40,11 +44,14 @@ export GOMODCACHE="$XDG_CACHE_HOME/go/mod"
 [ -d "$XDG_STATE_HOME/less" ] || mkdir -p "$XDG_STATE_HOME/less"
 export LESSHISTFILE="$XDG_STATE_HOME/less/history"
 
+# Mysql
+export MYSQL_HISTFILE="$XDG_STATE_HOME"/mysql/history
+
 # Neovim as manpager
 export MANPAGER="nvim +Man!"
 
 # Node
-export NODE_REPL_HISTORY="$XDG_DATA_HOME/node_repl_history"
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node/history"
 
 # Npm
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
@@ -66,7 +73,7 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 # SQLite
-export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite/history"
 
 # Starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"

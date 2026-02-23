@@ -1,0 +1,169 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+MODULES_DIR="$(dotfiles_dir)/modules"
+
+usage() {
+  cat <<EOF
+Usage:  do <module> <method> [args...]
+	do all <method> [args...]
+	do list [module]
+
+Dotfiles module runner
+
+Modes:
+  list                  Show modules with available methods
+  list <module>         Show methods for one module
+  all <method>          Run a method for every module
+
+Notes:
+  Methods are functions in module scripts
+  [args...] are passed to the method
+  Methods starting with '_' are private and hidden from listings
+  Override DOTFILES to target another dotfiles root or a subdirectory root
+
+Examples:
+  do nvim config               # Run the 'config' method for nvim
+  do nvim config "hello"       # Pass "hello" to config
+  do all config                # Run 'config' for every module (skips missing)
+  do list                      # List modules with available methods
+  do list nvim                 # List methods for a single module
+
+Override examples:
+  DOTFILES=~/.dotfiles-other bin/do nvim config   # Use a different dotfiles repo root
+  DOTFILES=~/.dotfiles/systems/macos bin/do list  # Use macOS sub-root in this repo
+EOF
+}
+
+list_modules() {
+  for script in "$MODULES_DIR"/*.zsh; do
+    [[ -f "$script" ]] || continue
+    basename "$script" .zsh
+  done
+}
+
+list_module_methods() {
+  for script in "$MODULES_DIR"/*.zsh; do
+    [[ -f "$script" ]] || continue
+    module_name="$(basename "$script" .zsh)"
+    list_module_methods_for "$module_name"
+  done
+}
+
+list_module_methods_for() {
+  local module="$1"
+  local script="$MODULES_DIR/$module.zsh"
+
+  if [[ ! -f "$script" ]]; then
+    echo_red "Error: module '$module' not found in $MODULES_DIR." >&2
+    exit 1
+  fi
+
+  local methods
+  methods=$(
+    {
+      grep -E '^[a-z][a-z0-9_]*[[:space:]]*\(\)[[:space:]]*\{' "$script" || true
+    } \
+    | sed -E 's/\(\)[[:space:]]*\{.*//' \
+    | sort -u \
+    | paste -sd ',' - \
+    | sed 's/,/, /g'
+  )
+  echo "$module: ${methods:-none}"
+}
+
+if [[ $# -ge 1 && "$1" == "list" ]]; then
+  if [[ $# -eq 1 ]]; then
+    echo "Available modules and methods:"
+    list_module_methods
+    exit 0
+  fi
+
+  if [[ $# -eq 2 ]]; then
+    echo "Methods for '$2':"
+    list_module_methods_for "$2"
+    exit 0
+  fi
+
+  usage
+  exit 1
+fi
+
+if [[ $# -eq 0 ]]; then
+  usage
+  echo
+  echo "Available modules and methods:"
+  list_module_methods
+  exit 0
+fi
+
+if [[ $# -eq 1 ]]; then
+  module="$1"
+  if [[ "$module" == "all" ]]; then
+    usage
+    exit 1
+  fi
+
+  if [[ ! -f "$MODULES_DIR/$module.zsh" ]]; then
+    usage
+    echo
+    echo_red "Error: module '$module' not found in $MODULES_DIR." >&2
+    echo
+    echo "Available modules and methods:"
+    list_module_methods
+    exit 1
+  fi
+
+  echo "Methods for '$module':"
+  list_module_methods_for "$module"
+  exit 0
+fi
+
+if [[ $# -lt 2 ]]; then
+  usage
+  exit 1
+fi
+
+module="$1"
+shift
+method="$1"
+shift
+
+if [[ "$module" == "all" ]]; then
+  for script in "$MODULES_DIR"/*.zsh; do
+    [[ -f "$script" ]] || continue
+    module_name="$(basename "$script" .zsh)"
+    (
+      source "$script"
+      if typeset -f "$method" > /dev/null; then
+        "$method" "$@"
+      fi
+    )
+  done
+  exit 0
+fi
+
+script="$MODULES_DIR/$module.zsh"
+if [[ ! -f "$script" ]]; then
+  echo_red "Error: module '$module' not found in $MODULES_DIR." >&2
+  exit 1
+fi
+
+(
+  source "$script"
+
+  if ! typeset -f "$method" > /dev/null; then
+    echo_red "Error: method '$method' not found in module '$module'." >&2
+    exit 1
+  fi
+
+  if [[ ! "$method" =~ '^[a-z][a-z0-9_]*$' ]]; then
+    echo_red "Error: invalid method name '$method'." >&2
+    exit 1
+  fi
+
+  "$method" "$@"
+)

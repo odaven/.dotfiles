@@ -1,0 +1,27 @@
+#!/usr/bin/env zsh
+
+set -euo pipefail
+
+source "$HOME/.dotfiles/lib/functions.zsh"
+
+cache_dir="$(cache_dir)"
+config_dir="$(config_dir)"
+data_dir="$(data_dir)"
+state_dir="$(state_dir)"
+bin_dir="$(local_bin_dir)"
+
+dirs=(
+  "$cache_dir"
+  "$config_dir"
+  "$bin_dir"
+  "$HOME/.local/opt"
+  "$data_dir"
+  "$state_dir"
+  "$state_dir/mysql"
+  "$state_dir/node"
+  "$state_dir/python"
+  "$state_dir/sqlite"
+  "$state_dir/zsh"
+)
+
+mkdir -p "${dirs[@]}"

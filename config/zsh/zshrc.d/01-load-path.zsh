@@ -31,5 +31,5 @@ export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PA
 # .local/bin
 export PATH="$XDG_BIN_HOME:$PATH"
 
-# Dotfiles bin
-export PATH="$HOME/.dotfiles/bin:$PATH"
+# .local/bin/common
+export PATH="$XDG_BIN_HOME/common:$PATH"

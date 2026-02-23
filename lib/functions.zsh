@@ -9,8 +9,37 @@
 # Light Gray   0;37     White         1;37
 
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 echo_red() {
   echo "${RED}$1${NC}"
+}
+
+echo_yellow() {
+  echo "${YELLOW}$1${NC}"
+}
+
+dotfiles_dir() {
+  echo "${DOTFILES:-$HOME/.dotfiles}"
+}
+
+config_dir() {
+  echo "${XDG_CONFIG_HOME:-$HOME/.config}"
+}
+
+cache_dir() {
+  echo "${XDG_CACHE_HOME:-$HOME/.cache}"
+}
+
+data_dir() {
+  echo "${XDG_DATA_HOME:-$HOME/.local/share}"
+}
+
+state_dir() {
+  echo "${XDG_STATE_HOME:-$HOME/.local/state}"
+}
+
+local_bin_dir() {
+  echo "${XDG_BIN_HOME:-$HOME/.local/bin}"
 }
