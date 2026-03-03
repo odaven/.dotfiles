@@ -23,6 +23,7 @@ alias notes='n ~/Dev/notes/'
 alias tb='tmux new-session -A -s bedrock'
 
 # Tools
+alias c='copilot'
 alias d='docker'
 alias g='git'
 alias ld='lazydocker'
