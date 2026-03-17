@@ -83,7 +83,5 @@ export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide"
 
 # zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
-export ZSH="$XDG_CONFIG_HOME/oh-my-zsh"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
-export ZSH_CUSTOM="$ZDOTDIR/oh-my-zsh/custom"
 export SHELL_SESSIONS_DISABLE=1
