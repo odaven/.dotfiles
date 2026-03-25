@@ -31,6 +31,7 @@ alias lg='lazygit'
 alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME/sqlite3/sqliterc"'
 
 # Update/upgrade tools and environments
+alias apt-up='sudo apt update && sudo apt upgrade -y && sudo apt autoremove --purge -y && sudo apt autoclean -y'
 alias brew-up='brew update && brew upgrade && brew autoremove && brew cleanup && brew doctor'
 alias gh-extensions-up='gh extension upgrade gh-copilot'
 alias rustup-up='rustup component add rust-analyzer && rustup update'

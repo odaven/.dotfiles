@@ -53,5 +53,5 @@ Run script `bootstrap`
 ### For installing remotely
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/odaven/.dotfiles/master/systems/raspberry-pi/bootstrap-remote)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/odaven/.dotfiles/master/systems/pi/bootstrap-remote)"
 ```

@@ -1,0 +1,39 @@
+#!/usr/bin/env sh
+
+set -euo pipefail
+
+sudo -v
+
+"$HOME/.dotfiles/bin/xdg-mkdirs"
+
+sudo apt update -yq
+sudo apt upgrade -yq
+
+sudo apt install -yq \
+  curl \
+  git \
+  golang \
+  neovim \
+  npm \
+  nodejs \
+  vim \
+  zsh
+
+"$HOME/.dotfiles/bin/do" docker install_pi
+
+sudo apt autoremove -yq
+sudo apt clean -yq
+
+"$HOME/.dotfiles/bin/do" npm config
+"$HOME/.dotfiles/bin/do" vim config
+"$HOME/.dotfiles/bin/do" zsh config
+
+"$HOME/.dotfiles/bin/link" "systems/pi/zsh" "$HOME/.config/zsh-local"
+
+rm -f "$HOME/.bash_history" "$HOME/.bash_logout" "$HOME/.bashrc" "$HOME/.profile" "$HOME/.zshrc" "$HOME/.zsh_history"
+
+# For Raspberry Pi OS Lite, enable user lingering for your user:
+# This allows users who are not logged in to run long-running services.
+loginctl enable-linger
+
+sudo chsh -s "$(which zsh)" "$(whoami)"
