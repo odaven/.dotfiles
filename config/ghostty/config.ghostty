@@ -1,0 +1,5 @@
+command = shell:/bin/zsh -ic 'tmux new-session -A -s bedrock'
+macos-option-as-alt = true
+theme = iTerm2 Dark background
+keybind = alt+2=text:€
+keybind = alt+3=text:#
