@@ -20,7 +20,7 @@ idea() { open -na "IntelliJ IDEA.app" --args "$@"; }
 alias notes='n ~/Dev/notes/'
 
 # Tmux
-alias tb='tmux new-session -A -s bedrock'
+alias tb='tmux new-session -A -s !bedrock'
 
 # Tools
 alias c='copilot'
