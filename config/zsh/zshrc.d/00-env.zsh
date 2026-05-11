@@ -15,6 +15,13 @@ export EDITOR="nvim"
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
 
+# Claude
+export CLAUDE_CONFIG_DIR="$XDG_CONFIG_HOME"/claude
+
+# Copilot
+export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
+export COPILOT_CACHE_HOME="$XDG_CACHE_HOME/copilot"
+
 # Fzf
 export FZF_DEFAULT_COMMAND="fd"
 export FZF_DEFAULT_OPTS=$'
