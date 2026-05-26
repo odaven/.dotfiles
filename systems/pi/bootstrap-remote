@@ -9,6 +9,6 @@ sudo apt upgrade -yq
 sudo apt install -yq git zsh
 
 rm -rf "$HOME/.dotfiles"
-git clone --depth 1 -b master https://github.com/odaven/.dotfiles.git "$HOME/.dotfiles"
+git clone https://github.com/odaven/.dotfiles.git "$HOME/.dotfiles"
 
 "$HOME/.dotfiles/systems/pi/bootstrap"
