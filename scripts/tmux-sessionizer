@@ -5,28 +5,29 @@ set -euo pipefail
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    dotfiles_folders=$(find ~ -maxdepth 1 -mindepth 1 -name ".dotfiles*" -type d | sort)
-    folders=$(find ~/Dev -maxdepth 1 -mindepth 1 -type d | sort) 2> /dev/null
+    selected=$(
+        {
+            find ~ -maxdepth 1 -mindepth 1 -name ".dotfiles*" -type d 2>/dev/null
 
-    all_folders="${dotfiles_folders}\n${folders}"
-
-    selected=$(echo "${all_folders}" | fzf --prompt 'Tmux Sessionizer > ')
+            [[ -d ~/Dev ]] && \
+                find ~/Dev -maxdepth 1 -mindepth 1 -type d 2>/dev/null
+        } |
+        sort |
+        fzf --prompt 'Tmux Sessionizer > '
+    )
 fi
 
-if [[ -z $selected ]]; then
-    exit 0
-fi
+[[ -z $selected ]] && exit 0
 
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
+selected_name=$(basename "$selected" | tr '.' '_')
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
+if [[ -z ${TMUX:-} ]] && ! pgrep tmux >/dev/null; then
     tmux new-session -s "$selected_name" -c "$selected"
     exit 0
 fi
 
-if ! tmux has-session -t="$selected_name" 2> /dev/null; then
+if ! tmux has-session -t "=$selected_name" 2>/dev/null; then
     tmux new-session -ds "$selected_name" -c "$selected"
 fi
 
-tmux switch-client -t "$selected_name"
+tmux switch-client -t "=$selected_name"
