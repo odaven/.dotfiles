@@ -28,7 +28,6 @@ alias d='docker'
 alias g='git'
 alias ld='lazydocker'
 alias lg='lazygit'
-alias sqlite3='sqlite3 -init "$XDG_CONFIG_HOME/sqlite3/sqliterc"'
 
 # Update/upgrade tools and environments
 alias apt-up='sudo apt update && sudo apt upgrade -y && sudo apt autoremove --purge -y && sudo apt autoclean -y'
