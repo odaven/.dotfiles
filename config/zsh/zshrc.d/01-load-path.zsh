@@ -1,35 +1,22 @@
-# Loading the PATH
-# This file should be sourced before the .zsh-local
-# so we can be sure any PATH added locally has priority over the general one below
+typeset -U path PATH
 
-# Homebrew - Goes first so I can use 'brew --prefix'
-export PATH="/opt/homebrew/bin:$PATH"
+path=(
+  "$XDG_BIN_HOME/common"
+  "$XDG_BIN_HOME"
 
-# Curl
-if command -v brew &> /dev/null; then
-    export PATH="$(brew --prefix curl)/bin:$PATH"
-fi
+  "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 
-# Go
-export PATH="$GOBIN:$PATH"
+  # keg-only bins
+  "/opt/homebrew/opt/curl/bin"
+  "/opt/homebrew/opt/openjdk/bin"
+  "/opt/homebrew/opt/sqlite/bin"
 
-# Npm
-export PATH="$(npm config get prefix)/bin:$PATH"
+  "/opt/homebrew/bin"
 
-# Rust
-export PATH="$CARGO_HOME/bin:$PATH"
-if command -v brew &> /dev/null; then
-    export PATH="$(brew --prefix rustup)/bin:$PATH"
-fi
+  "$CARGO_HOME/bin"
+  "$GOBIN"
 
-# SQLite
-export PATH="/usr/local/opt/sqlite/bin:$PATH"
+  "$path[@]"
+)
 
-# Add Visual Studio Code (code)
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
-# .local/bin
-export PATH="$XDG_BIN_HOME:$PATH"
-
-# .local/bin/common
-export PATH="$XDG_BIN_HOME/common:$PATH"
+export PATH

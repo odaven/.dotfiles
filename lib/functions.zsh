@@ -10,6 +10,7 @@
 
 RED='\033[0;31m'
 YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
 echo_red() {
@@ -18,6 +19,10 @@ echo_red() {
 
 echo_yellow() {
   echo "${YELLOW}$1${NC}"
+}
+
+echo_blue() {
+  echo "${BLUE}$1${NC}"
 }
 
 dotfiles_dir() {

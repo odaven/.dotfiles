@@ -2,26 +2,31 @@
 setopt AUTO_CD                # cd by typing directory name
 setopt AUTO_PUSHD             # push directories to the stack
 setopt PUSHD_IGNORE_DUPS      # no duplicates in the dir stack
+setopt PUSHD_SILENT           # don't print the dir stack after pushd/popd
 
 # Completion system
-autoload -Uz compinit && compinit -d "$ZSH_COMPDUMP"
+autoload -Uz compinit
+compinit -C -d "$ZSH_COMPDUMP"
 
 # Navigate completions with arrow keys / tab
 zstyle ':completion:*' menu select
 
 # Case-insensitive and partial matching
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' matcher-list \
+  'm:{a-zA-Z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*' \
+  'l:|=* r:|=*'
 
 # Group completions by category
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*:descriptions' format '%F{yellow}-- %d --%f'
 
-# Directory colors (consistent across macOS ls, GNU ls, and completion menu)
+# Directory colors
 export LSCOLORS="Gxfxcxdxbxegedabagacad"
 export LS_COLORS="${LS_COLORS:+$LS_COLORS:}di=01;36:ln=35"
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 
-# Complete . and .. directories
+# Complete . and ..
 zstyle ':completion:*' special-dirs true
 
 # Cache expensive completions
