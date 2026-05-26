@@ -67,6 +67,25 @@ decompress() {
   tar -xzf "$archive" && echo "${archive%.tar.gz}"
 }
 
+tb() {
+  local session='!bedrock'
+
+  if tmux has-session -t "=$session" 2>/dev/null; then
+    if [[ -n ${TMUX:-} ]]; then
+        tmux switch-client -t "=$session"
+    else
+        tmux attach-session -t "=$session"
+    fi
+  else
+    if [[ -n ${TMUX:-} ]]; then
+        tmux new-session -ds "$session"
+        tmux switch-client -t "=$session"
+    else
+        tmux new-session -s "$session"
+    fi
+  fi
+}
+
 # Quickly serve current directory over HTTP (Python 3)
 serve() { 
   python3 -m http.server "${1:-8000}"; 
