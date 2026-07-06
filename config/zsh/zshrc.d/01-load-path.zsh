@@ -9,6 +9,7 @@ path=(
   # keg-only bins
   "/opt/homebrew/opt/curl/bin"
   "/opt/homebrew/opt/openjdk/bin"
+  "/opt/homebrew/opt/rustup/bin"
   "/opt/homebrew/opt/sqlite/bin"
 
   "/opt/homebrew/bin"
