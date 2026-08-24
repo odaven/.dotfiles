@@ -239,7 +239,7 @@
 			<key>Columns</key>
 			<integer>80</integer>
 			<key>Command</key>
-			<string>tmux new-session -A -s bedrock</string>
+			<string></string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -307,7 +307,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>tb</string>
+			<string>~/.local/bin/common/tmux-init</string>
 			<key>Initial Use Transparency</key>
 			<true/>
 			<key>Jobs to Ignore</key>

@@ -24,6 +24,9 @@ alias a='copilot'
 alias ac='a --continue'
 alias ar='a --resume'
 
+# Tmux
+alias tb=tmux-init
+
 # Tools
 alias d='docker'
 alias g='git'
@@ -42,3 +45,4 @@ alias ports='lsof -i -P -n | grep LISTEN'
 
 # Zsh
 alias zshrc-reload="source ~/.config/zsh/.zshrc"
+
