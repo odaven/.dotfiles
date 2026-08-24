@@ -19,22 +19,26 @@ idea() { open -na "IntelliJ IDEA.app" --args "$@"; }
 # Notes
 alias notes='n ~/Dev/notes/'
 
+# Agents
+alias a='copilot'
+alias ac='a --continue'
+alias ar='a --resume'
+
 # Tools
-alias c='copilot'
 alias d='docker'
 alias g='git'
 alias ld='lazydocker'
 alias lg='lazygit'
 
-# Update/upgrade tools and environments
+# Updates
 alias apt-up='sudo apt update && sudo apt upgrade -y && sudo apt autoremove --purge -y && sudo apt autoclean -y'
 alias brew-up='brew update && brew upgrade && brew autoremove && brew cleanup && brew doctor'
 alias gh-extensions-up='gh extension upgrade gh-copilot'
 alias rustup-up='rustup component add rust-analyzer && rustup update'
 
-# System info
+# System
 alias path='echo $PATH | tr ":" "\n"'
 alias ports='lsof -i -P -n | grep LISTEN'
 
-# Reload zsh config
+# Zsh
 alias zshrc-reload="source ~/.config/zsh/.zshrc"
