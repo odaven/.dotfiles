@@ -17,7 +17,7 @@ alias n='nvim'
 idea() { open -na "IntelliJ IDEA.app" --args "$@"; }
 
 # Notes
-alias notes='n ~/Dev/notes/'
+alias notes='(cd ~/Dev/notes/ && n)'
 
 # Agents
 alias a='copilot'
