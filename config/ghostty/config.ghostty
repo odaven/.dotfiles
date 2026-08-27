@@ -1,0 +1,24 @@
+# Startup
+command = "$HOME/.local/bin/common/tmux-init"
+
+# Appearance
+background = 000000
+font-feature = -calt
+font-feature = -dlig
+font-feature = -liga
+font-size = 18
+theme = "TokyoNight Night"
+window-padding-x = 10
+window-padding-y = 10
+
+# Keybinds
+macos-option-as-alt = true
+keybind = alt+2=text:€
+keybind = alt+3=text:#
+
+# Bell
+bell-features = no-audio,no-system
+
+# Window & Closing
+confirm-close-surface = false
+quit-after-last-window-closed = true
