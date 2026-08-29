@@ -1,27 +1,51 @@
 source "$HOME/.dotfiles/lib/functions.zsh"
 
+CONFIG="$(config_dir)/nvim"
+REPO_DIR="$HOME/.nvim"
+REPO_HTTP="https://github.com/odaven/.nvim.git"
+REPO_SSH="git@github.com:odaven/.nvim.git"
+
+_clone() {
+  rm -rf "$REPO_DIR"
+
+  if git ls-remote "$REPO_SSH" >/dev/null 2>&1; then
+    git clone "$REPO_SSH" "$REPO_DIR"
+  else
+    git clone "$REPO_HTTP" "$REPO_DIR"
+  fi
+}
+
+_link() {
+  rm -rf "$CONFIG"
+  ln -sfv "$1" "$CONFIG"
+}
+
 config() {
-  local repo="https://github.com/odaven/nvim.git"
-  local src="$HOME/.dotfiles/config/nvim"
+  _clone
+  default
+}
 
-  rm -rf "$src"
-  git clone "$repo" "$src"
+config_minimal() {
+  _clone
+  minimal
+}
 
-  dot
+default() {
+  _link "$REPO_DIR"
+}
+
+minimal() {
+  _link "$REPO_DIR/minimal"
+}
+
+none() {
+  rm -rf "$CONFIG"
 }
 
 clean() {
-  rm -rf "$(data_dir)/nvim" "$(state_dir)/nvim" "$(cache_dir)/nvim" "$(config_dir)/nvim"
-}
-
-dev() {
-  local src="$HOME/Dev/nvim"
-  local dest="$(config_dir)/nvim"
-
-  [[ -e $dest || -L $dest ]] && rm -rf "$dest"
-  ln -sv "$src" "$dest"
-}
-
-dot() {
-  "$HOME/.dotfiles/bin/link" "config/nvim" "$(config_dir)/nvim"
+  rm -rf \
+    "$(data_dir)/nvim" \
+    "$(state_dir)/nvim" \
+    "$(cache_dir)/nvim" \
+    "$CONFIG"
 }
