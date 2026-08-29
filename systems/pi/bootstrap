@@ -25,6 +25,7 @@ sudo apt autoremove -yq
 sudo apt clean -yq
 
 "$HOME/.dotfiles/bin/do" npm config
+"$HOME/.dotfiles/bin/do" nvim config_minimal
 "$HOME/.dotfiles/bin/do" vim config
 "$HOME/.dotfiles/bin/do" zsh config
 
