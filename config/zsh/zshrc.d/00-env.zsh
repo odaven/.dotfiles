@@ -7,6 +7,7 @@ export XDG_STATE_HOME="$HOME/.local/state"
 
 # Dotfiles
 export DOTFILES="$HOME/.dotfiles"
+export DOTFILES_AGENTS="$HOME/.agents"
 
 # Editor
 export EDITOR="nvim"
@@ -14,13 +15,6 @@ export EDITOR="nvim"
 # AWS
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
-
-# Claude
-export CLAUDE_CONFIG_DIR="$XDG_CONFIG_HOME"/claude
-
-# Copilot
-export COPILOT_HOME="$XDG_CONFIG_HOME/copilot"
-export COPILOT_CACHE_HOME="$XDG_CACHE_HOME/copilot"
 
 # Fzf
 export FZF_DEFAULT_COMMAND="fd"
