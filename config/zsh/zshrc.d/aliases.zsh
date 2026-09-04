@@ -19,11 +19,6 @@ idea() { open -na "IntelliJ IDEA.app" --args "$@"; }
 # Notes
 alias notes='(cd ~/Dev/notes/ && n)'
 
-# Agents
-alias a='copilot'
-alias ac='a --continue'
-alias ar='a --resume'
-
 # Tmux
 alias tb=tmux-init
 
