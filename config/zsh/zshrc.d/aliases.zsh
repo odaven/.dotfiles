@@ -16,6 +16,11 @@ alias lla='ls -Al'
 alias n='nvim'
 idea() { open -na "IntelliJ IDEA.app" --args "$@"; }
 
+# Agents
+alias a='codex'
+alias ac='a resume --last'
+alias ar='a resume'
+
 # Notes
 alias notes='(cd ~/Dev/notes/ && n)'
 
@@ -40,4 +45,3 @@ alias ports='lsof -i -P -n | grep LISTEN'
 
 # Zsh
 alias zshrc-reload="source ~/.config/zsh/.zshrc"
-
