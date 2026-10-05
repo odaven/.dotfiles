@@ -24,7 +24,45 @@ return {
     "folke/snacks.nvim",
     opts = {
       dashboard = { preset = { header = "" } },
-      picker = { previewers = { git = { builtin = false } } },
+      picker = {
+        previewers = { git = { builtin = false } },
+        sources = {
+          explorer = {
+            win = {
+              input = {
+                keys = {
+                  ["<c-h>"] = { "tmux_left", mode = "n" },
+                  ["<c-j>"] = { "tmux_down", mode = "n" },
+                  ["<c-k>"] = { "tmux_up", mode = "n" },
+                  ["<c-l>"] = { "tmux_right", mode = "n" },
+                },
+              },
+              list = {
+                keys = {
+                  ["<c-h>"] = "tmux_left",
+                  ["<c-j>"] = "tmux_down",
+                  ["<c-k>"] = "tmux_up",
+                  ["<c-l>"] = "tmux_right",
+                },
+              },
+            },
+            actions = {
+              tmux_left = function()
+                vim.fn.system({ "tmux", "select-pane", "-L" })
+              end,
+              tmux_down = function()
+                vim.fn.system({ "tmux", "select-pane", "-D" })
+              end,
+              tmux_up = function()
+                vim.fn.system({ "tmux", "select-pane", "-U" })
+              end,
+              tmux_right = function()
+                vim.cmd("TmuxNavigateRight")
+              end,
+            },
+          },
+        },
+      },
     },
   },
   {
