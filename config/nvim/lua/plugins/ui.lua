@@ -24,6 +24,44 @@ return {
     "folke/snacks.nvim",
     opts = {
       dashboard = { preset = { header = "" } },
+      lazygit = {
+        win = {
+          keys = {
+            nav_h = {
+              "<C-h>",
+              function()
+                vim.fn.system({ "tmux", "select-pane", "-L" })
+              end,
+              mode = "t",
+              desc = "Go to Left Pane",
+            },
+            nav_j = {
+              "<C-j>",
+              function()
+                vim.fn.system({ "tmux", "select-pane", "-D" })
+              end,
+              mode = "t",
+              desc = "Go to Lower Pane",
+            },
+            nav_k = {
+              "<C-k>",
+              function()
+                vim.fn.system({ "tmux", "select-pane", "-U" })
+              end,
+              mode = "t",
+              desc = "Go to Upper Pane",
+            },
+            nav_l = {
+              "<C-l>",
+              function()
+                vim.fn.system({ "tmux", "select-pane", "-R" })
+              end,
+              mode = "t",
+              desc = "Go to Right Pane",
+            },
+          },
+        },
+      },
       picker = {
         previewers = { git = { builtin = false } },
         sources = {
