@@ -5,6 +5,7 @@ setopt PUSHD_IGNORE_DUPS      # no duplicates in the dir stack
 setopt PUSHD_SILENT           # don't print the dir stack after pushd/popd
 
 # Completion system
+[[ -d "${ZSH_COMPDUMP:h}" ]] || mkdir -p "${ZSH_COMPDUMP:h}"
 autoload -Uz compinit
 compinit -C -d "$ZSH_COMPDUMP"
 
