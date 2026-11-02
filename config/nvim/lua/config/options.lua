@@ -6,5 +6,6 @@ vim.g.snacks_animate = false
 
 vim.opt.conceallevel = 0
 vim.opt.scrolloff = 999
+vim.opt.spelllang = { "en", "es" }
 vim.opt.swapfile = false
 vim.opt.winborder = "rounded"
