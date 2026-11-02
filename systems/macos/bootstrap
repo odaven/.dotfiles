@@ -2,6 +2,8 @@
 
 set -euo pipefail
 
+export DOTFILES_MACOS="$HOME/.dotfiles/systems/macos"
+
 # Ask sudo first
 sudo -v
 

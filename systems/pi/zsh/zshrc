@@ -1,3 +1,7 @@
 #!/usr/bin/env zsh
 
-PROMPT='%F{green}%n%f@%F{green}%m%f %B%F{cyan}%~%f%b %# '
+alias bat="batcat"
+
+if [[ -z "${TMUX:-}" ]]; then
+  tmux-init !bedrock-pi
+fi

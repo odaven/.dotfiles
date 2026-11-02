@@ -1,7 +1,14 @@
 #!/bin/bash
 
+source "$HOME/.dotfiles/lib/profile.zsh"
+
 session="${1:-!bedrock}"
-tmux="/opt/homebrew/bin/tmux"
+
+if is_raspberry_pi; then
+  tmux="/usr/bin/tmux"
+else
+  tmux="/opt/homebrew/bin/tmux"
+fi
 
 if $tmux has-session -t "=$session" 2>/dev/null; then
   if [[ -n ${TMUX:-} ]]; then

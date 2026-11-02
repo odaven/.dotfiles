@@ -1,4 +1,5 @@
 source "$HOME/.dotfiles/lib/functions.zsh"
+source "$HOME/.dotfiles/lib/profile.zsh"
 
 CONFIG="$(config_dir)/nvim"
 SOURCE="$(dotfiles_dir)/config/nvim"
@@ -9,11 +10,19 @@ _link() {
 }
 
 config() {
-  _link "$SOURCE"
+  if is_raspberry_pi; then
+    config_minimal
+  else
+    config_full
+  fi
 }
 
 config_minimal() {
   _link "$SOURCE/minimal"
+}
+
+config_full() {
+  _link "$SOURCE"
 }
 
 none() {
