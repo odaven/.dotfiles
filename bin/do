@@ -3,8 +3,9 @@
 set -euo pipefail
 
 source "$HOME/.dotfiles/lib/functions.zsh"
+source "$HOME/.dotfiles/config/zsh/env.zsh"
 
-MODULES_DIR="$(dotfiles_dir)/modules"
+MODULES_DIR="${DO_DOTFILES:-$DOTFILES}/modules"
 
 usage() {
   cat <<EOF
@@ -23,7 +24,7 @@ Notes:
   Methods are functions in module scripts
   [args...] are passed to the method
   Methods starting with '_' are private and hidden from listings
-  Override DOTFILES to target another dotfiles root or a subdirectory root
+  Override DO_DOTFILES to target another dotfiles root or a subdirectory root
 
 Examples:
   do nvim config               # Run the 'config' method for nvim
@@ -33,8 +34,8 @@ Examples:
   do list nvim                 # List methods for a single module
 
 Override examples:
-  DOTFILES=~/.dotfiles-other bin/do nvim config   # Use a different dotfiles repo root
-  DOTFILES=~/.dotfiles/systems/macos bin/do list  # Use macOS sub-root in this repo
+  DO_DOTFILES=~/.dotfiles-other bin/do nvim config   # Use a different dotfiles repo root
+  DO_DOTFILES=~/.dotfiles/systems/macos bin/do list  # Use macOS sub-root in this repo
 EOF
 }
 

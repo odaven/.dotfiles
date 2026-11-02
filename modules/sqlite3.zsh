@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/sqlite3" "$(config_dir)/sqlite3"
+  "$HOME/.dotfiles/bin/link" "config/sqlite3" "$XDG_CONFIG_HOME/sqlite3"
 }

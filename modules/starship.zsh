@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/starship" "$(config_dir)/starship"
+  "$HOME/.dotfiles/bin/link" "config/starship" "$XDG_CONFIG_HOME/starship"
 }

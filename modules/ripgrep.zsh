@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/ripgrep" "$(config_dir)/ripgrep"
+  "$HOME/.dotfiles/bin/link" "config/ripgrep" "$XDG_CONFIG_HOME/ripgrep"
 }

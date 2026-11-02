@@ -3,8 +3,9 @@
 set -euo pipefail
 
 source "$HOME/.dotfiles/lib/functions.zsh"
+source "$HOME/.dotfiles/config/zsh/env.zsh"
 
-DOTFILES_ROOT="$(dotfiles_dir)"
+DOTFILES_ROOT="${DO_DOTFILES:-$DOTFILES}"
 
 link_dot() {
   local src="$DOTFILES_ROOT/$1"

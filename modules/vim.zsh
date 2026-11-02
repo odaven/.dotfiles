@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
   "$HOME/.dotfiles/bin/link" "config/vim/vimrc" "$HOME/.vimrc"
 

@@ -1,10 +1,10 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
 source "$HOME/.dotfiles/lib/profile.zsh"
 
 config() {
-  "$HOME/.dotfiles/bin/link" "config/fd" "$(config_dir)/fd"
+  "$HOME/.dotfiles/bin/link" "config/fd" "$XDG_CONFIG_HOME/fd"
 
   if is_raspberry_pi; then
-    ln -sfv "$(command -v fdfind)" "$(local_bin_dir)/fd"
+    mkdir -p "$XDG_BIN_HOME"
+    ln -sfv "$(command -v fdfind)" "$XDG_BIN_HOME/fd"
   fi
 }

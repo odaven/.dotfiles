@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "scripts" "$(local_bin_dir)/common"
+  "$HOME/.dotfiles/bin/link" "scripts" "$XDG_BIN_HOME/common"
 }

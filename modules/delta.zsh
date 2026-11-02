@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/delta" "$(config_dir)/delta"
+  "$HOME/.dotfiles/bin/link" "config/delta" "$XDG_CONFIG_HOME/delta"
 }

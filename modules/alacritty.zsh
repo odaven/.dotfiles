@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/alacritty" "$(config_dir)/alacritty"
+  "$HOME/.dotfiles/bin/link" "config/alacritty" "$XDG_CONFIG_HOME/alacritty"
 }

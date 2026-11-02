@@ -87,7 +87,9 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 # Zoxide
 export _ZO_DATA_DIR="$XDG_DATA_HOME/zoxide"
 
-# zsh configuration files
+# Zsh configuration files
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+export ZDOTDIR_LOCAL="$XDG_CONFIG_HOME/zsh-local"
+export ZDOTDIR_PRIVATE="$XDG_CONFIG_HOME/zsh-private"
 export ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 export SHELL_SESSIONS_DISABLE=1

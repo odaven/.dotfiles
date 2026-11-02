@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/iterm2" "$(config_dir)/iterm2"
+  "$HOME/.dotfiles/bin/link" "config/iterm2" "$XDG_CONFIG_HOME/iterm2"
 }

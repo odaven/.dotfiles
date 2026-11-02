@@ -2,29 +2,23 @@
 
 set -euo pipefail
 
-source "$HOME/.dotfiles/lib/functions.zsh"
-
-cache_dir="$(cache_dir)"
-config_dir="$(config_dir)"
-data_dir="$(data_dir)"
-state_dir="$(state_dir)"
-bin_dir="$(local_bin_dir)"
+source "$HOME/.dotfiles/config/zsh/env.zsh"
 
 dirs=(
-  "$cache_dir"
-  "$cache_dir/python"
-  "$config_dir"
-  "$bin_dir"
+  "$XDG_CACHE_HOME"
+  "$XDG_CACHE_HOME/python"
+  "$XDG_CONFIG_HOME"
+  "$XDG_BIN_HOME"
   "$HOME/.local/opt"
-  "$data_dir"
-  "$data_dir/python"
-  "$state_dir"
-  "$state_dir/less"
-  "$state_dir/mysql"
-  "$state_dir/node"
-  "$state_dir/python"
-  "$state_dir/sqlite"
-  "$state_dir/zsh"
+  "$XDG_DATA_HOME"
+  "$XDG_DATA_HOME/python"
+  "$XDG_STATE_HOME"
+  "$XDG_STATE_HOME/less"
+  "$XDG_STATE_HOME/mysql"
+  "$XDG_STATE_HOME/node"
+  "$XDG_STATE_HOME/python"
+  "$XDG_STATE_HOME/sqlite"
+  "$XDG_STATE_HOME/zsh"
 )
 
 mkdir -p "${dirs[@]}"

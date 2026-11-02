@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/ideavim" "$(config_dir)/ideavim"
+  "$HOME/.dotfiles/bin/link" "config/ideavim" "$XDG_CONFIG_HOME/ideavim"
 }

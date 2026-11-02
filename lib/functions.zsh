@@ -24,27 +24,3 @@ echo_yellow() {
 echo_blue() {
   echo "${BLUE}$1${NC}"
 }
-
-dotfiles_dir() {
-  echo "${DOTFILES:-$HOME/.dotfiles}"
-}
-
-config_dir() {
-  echo "${XDG_CONFIG_HOME:-$HOME/.config}"
-}
-
-cache_dir() {
-  echo "${XDG_CACHE_HOME:-$HOME/.cache}"
-}
-
-data_dir() {
-  echo "${XDG_DATA_HOME:-$HOME/.local/share}"
-}
-
-state_dir() {
-  echo "${XDG_STATE_HOME:-$HOME/.local/state}"
-}
-
-local_bin_dir() {
-  echo "${XDG_BIN_HOME:-$HOME/.local/bin}"
-}

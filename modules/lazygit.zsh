@@ -1,5 +1,3 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
-
 config() {
-  "$HOME/.dotfiles/bin/link" "config/lazygit" "$(config_dir)/lazygit"
+  "$HOME/.dotfiles/bin/link" "config/lazygit" "$XDG_CONFIG_HOME/lazygit"
 }

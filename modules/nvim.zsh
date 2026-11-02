@@ -1,8 +1,7 @@
-source "$HOME/.dotfiles/lib/functions.zsh"
 source "$HOME/.dotfiles/lib/profile.zsh"
 
-CONFIG="$(config_dir)/nvim"
-SOURCE="$(dotfiles_dir)/config/nvim"
+CONFIG="$XDG_CONFIG_HOME/nvim"
+SOURCE="$DOTFILES/config/nvim"
 
 _link() {
   rm -rf "$CONFIG"
@@ -31,8 +30,8 @@ none() {
 
 clean() {
   rm -rf \
-    "$(data_dir)/nvim" \
-    "$(state_dir)/nvim" \
-    "$(cache_dir)/nvim" \
+    "$XDG_DATA_HOME/nvim" \
+    "$XDG_STATE_HOME/nvim" \
+    "$XDG_CACHE_HOME/nvim" \
     "$CONFIG"
 }
