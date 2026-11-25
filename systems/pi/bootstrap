@@ -33,6 +33,7 @@ sudo apt install -yq \
   zoxide
 
 "$HOME/.dotfiles/bin/do" docker install_pi
+"$HOME/.dotfiles/bin/do" tailscale install
 
 sudo apt autoremove -yq
 sudo apt clean -yq
