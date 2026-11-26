@@ -13,6 +13,7 @@ sudo apt upgrade -yq
 
 sudo apt install -yq \
   bat \
+  btop \
   curl \
   fd-find \
   fzf \
